@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/googler_linera"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorHind"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimen_3">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/row_google_profileImage"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:padding="@dimen/dimen_5"
+        android:src="@drawable/img_preview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_5">
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/row_google_uniqueId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/row_google_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_16" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/row_google_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_16" />
+
+    </LinearLayout>
+
+</LinearLayout>

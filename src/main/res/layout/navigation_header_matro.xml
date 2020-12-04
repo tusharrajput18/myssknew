@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+    
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/img_profileNav_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/img_preview" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_toRightOf="@+id/img_profileNav_image"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_5">
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/tv_headerNav_uniqueId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorHind"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextViewBold
+            android:id="@+id/tv_headerNav_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorHind"
+            android:textSize="@dimen/text_16" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/subscription_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free"
+            android:textColor="@color/colorHind"
+            android:textSize="@dimen/text_16" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/contact_view_credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Contact view credits"
+            android:textColor="@color/colorHind"
+            android:textSize="@dimen/text_16" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/buy_subscription"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:background="@color/controlColor1"
+            android:paddingLeft="@dimen/padding_margin_medium"
+            android:paddingTop="@dimen/padding_margin_small"
+            android:paddingRight="@dimen/padding_margin_medium"
+            android:paddingBottom="@dimen/padding_margin_small"
+            android:text="Go Premium"
+            android:textColor="@color/colorHind"
+            android:textSize="@dimen/text_16" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

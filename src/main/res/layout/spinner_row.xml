@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:id="@+id/tv_spinner_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|center"
+        android:paddingBottom="@dimen/dimen_2"
+        android:paddingEnd="@dimen/dimen_10"
+        android:paddingStart="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_1"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_18" />
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/colorHind" />
+
+</LinearLayout>

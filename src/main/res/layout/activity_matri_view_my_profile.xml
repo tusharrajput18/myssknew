@@ -1,0 +1,2712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.ViewMyProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/viewProfile_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/profileView_collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_image">
+
+                <ImageView
+                    android:id="@+id/img_viewProfile_Profileimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/image_one"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_preview"
+                    app:layout_collapseMode="pin" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/viewProfile_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="@dimen/dimen_5"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+                app:titleTextColor="@color/colorBlack" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorText"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_1"
+                android:background="@color/colorHind"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_10">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:text="@string/personal_information"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_18" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:id="@+id/tv_search_created_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_create"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/in_my_own_words"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:id="@+id/tv_search_introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="@string/introduction" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColor" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_description"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/basic_details"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/name" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_uniqueId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_name"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/unique" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_name"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/_tv_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_uniqueId"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/gender" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_uniqueId"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/_tv_gender"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/age" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_age_dot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/_tv_gender"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_age"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/height" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_height_dot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_age"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_married_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_height"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/married_status" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_married_statusDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_height"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_mother_tongue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_married_status"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/mother_tongue" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_mother_tongueDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_married_status"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_physical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_mother_tongue"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/physical_status" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_physicalDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_mother_tongue"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_body_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_physical"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/body_type" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_body_typeDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_physical"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_body_complexion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_body_type"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/complexion" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_body_complexionDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_body_type"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_body_complexion"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/profile_created_by" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_profileDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_body_complexion"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_Eating_Habits"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_profile"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/eating_habits" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_Eating_HabitsDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_profile"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_drinking_habit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_Eating_Habits"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/drinking_habits" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_drinking_habitDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_Eating_Habits"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_smoking_habits"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_drinking_habit"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/smoking_habits" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_smoking_habitsDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_drinking_habit"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_uniqueId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_name"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_uniqueId"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_gender"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_age"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_married_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_height"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_mother_tongue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_married_status"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_physical_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_mother_tongue"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_body_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_physical_status"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_profileView_complexion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_body_type"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_profile_created_by"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_body_type"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_eating_habit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_profile_created_by"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_drinking_habit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_eating_habit"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_smoking_habit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_drinking_habit"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_profileViewProfession"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:id="@+id/tv_profileViewProfession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_school"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/professional_info"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:id="@+id/layout_profileViewProfession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/education" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/dot" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_search_eduction"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/eduction_in"
+                                tools:ignore="TooManyViews" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/dot" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_search_eduction_in"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/working_with" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/dot" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_search_working_with"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/working_as" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/dot" />
+
+                        </RelativeLayout>
+
+                        <TableRow
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_search_working_as"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                />
+
+
+                        </TableRow>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/annual_income" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/dot" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_search_annual_income"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_profileViewLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor" />
+
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:id="@+id/tv_profileViewLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/location"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/layout_tv_profileViewLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/country" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_country"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/state" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_country"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_City"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_state"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/city" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_state"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_country"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_state"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor" />
+
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:id="@+id/tv_profileViewFamilyDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_family_yellow"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/family_details"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/layout_profileViewFamilyDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_ftype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/family_type" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_fstatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_ftype"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/father_status" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_ftype"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_mStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_fstatus"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/mother_status" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_fstatus"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_no_of_brothers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_mStatus"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/brother_s" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_mStatus"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_no_of_brothers_married"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_no_of_brothers"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/brother_s_married" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_no_of_brothers"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_no_of_sisters"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_no_of_brothers_married"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/sister_s" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_no_of_brothers_married"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_no_of_sisters_married"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_no_of_sisters"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/sister_s_married" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_no_of_sisters"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_family_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_father_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_family_type"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_mother_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_father_status"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_no_of_brother"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_mother_status"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_no_of_brother_married"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_no_of_brother"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_no_of_sister"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_no_of_brother_married"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_no_of_sister_married"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_no_of_sister"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_profileViewFamilyDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor" />
+
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:id="@+id/tv_profileViewAstroDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_astro_red"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/astro_details"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/layout_profileViewAstroDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_dob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/date_of_birth" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_birth_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_dob"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/birth_time" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_dob"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_birth_place"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_birth_time"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/birth_place" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_birth_time"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_gotra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_birth_place"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/gotra" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_birth_place"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_rashi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_gotra"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/rashi" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_gotra"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_nakshtra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_rashi"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/nakshatra" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_rashi"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_Charan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_nakshtra"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/charan" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_nakshtra"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot1" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_naadi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_Charan"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/naadi" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_Charan"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_gan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_naadi"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/gan" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_naadi"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_birth_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_birth_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_birth_date"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_birth_place"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_birth_time"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_gotra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_birth_place"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_rashi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_gotra"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_nakshtra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_rashi"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_charan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_nakshtra"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_naadi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_charan"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_gan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_naadi"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_profileViewAstroDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:id="@+id/tv_profileView_kundli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_astro_red"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/kundli_photo"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/img_profileView_kundli"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/view_kundli_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_1"
+                android:background="@color/colorHind"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_10">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:text="@string/personal_information"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_18" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:id="@+id/tv_search_created_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_create"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/in_my_own_words"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:id="@+id/tv_search_introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="@string/introduction" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/textColor" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_description"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/basic_details"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/name" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_uniqueId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_name"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/unique" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_name"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/_tv_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_uniqueId"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/gender" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_uniqueId"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/_tv_gender"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/age" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/_tv_gender"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_age"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/height" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_age"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_married_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_height"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/married_status" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_height"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_mother_tongue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_married_status"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/mother_tongue" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_married_status"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_Caste"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_mother_tongue"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/cast" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_CasteDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_mother_tongue"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_subCaste"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_Caste"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/sub_caste" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_subCasteDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_Caste"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_physical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_subCaste"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/physical_status" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_subCaste"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_body_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_physical"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/body_type" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_physical"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_body_type"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/profile_created_by" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_body_type"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_Eating_Habits"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_profile"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/eating_habits" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_profile"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_drinking_habit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_Eating_Habits"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/drinking_habits" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_Eating_Habits"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_smoking_habits"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_drinking_habit"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/smoking_habits" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_drinking_habit"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_uniqueId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_name"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_uniqueId"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_gender"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_age"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_married_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_height"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_mother_tongue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_married_status"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_caste"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_mother_tongue"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_subCaste"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_caste"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_physical_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_subCaste"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_body_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_physical_status"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_profile_created_by"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_body_type"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_eating_habit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_profile_created_by"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_drinking_habit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_eating_habit"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_smoking_habit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_drinking_habit"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_school"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/professional_info"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/education" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/dot" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_search_eduction"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:textAlignment="viewStart" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/eduction_in"
+                                tools:ignore="TooManyViews" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/dot" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_search_eduction_in"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:textAlignment="viewStart" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/working_with" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/dot" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_search_working_with"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:textAlignment="viewStart" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/working_as" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/dot" />
+
+                        </RelativeLayout>
+
+                        <TableRow
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_search_working_as"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:textAlignment="viewStart" />
+
+
+                        </TableRow>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/annual_income" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:text="@string/dot" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_search_annual_income"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:textAlignment="viewStart" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor" />
+
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/location"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/country" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_country"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/state" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_country"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_City"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_state"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/city" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_state"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_country"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_state"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor" />
+
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/family_details"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_ftype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/family_type" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_fstatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_ftype"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/father_status" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_ftype"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_mStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_fstatus"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/mother_status" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_fstatus"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_no_of_brothers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_mStatus"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/brother_s" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_mStatus"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_no_of_brothers_married"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_no_of_brothers"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/brother_s_married" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_no_of_brothers"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_no_of_sisters"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_no_of_brothers_married"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/sister_s" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_no_of_brothers_married"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_no_of_sisters_married"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_no_of_sisters"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/sister_s_married" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_no_of_sisters"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_family_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_father_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_family_type"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_mother_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_father_status"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_no_of_brother"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_mother_status"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_no_of_brother_married"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_no_of_brother"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_no_of_sister"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_no_of_brother_married"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_no_of_sister_married"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_no_of_sister"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor" />
+
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/astro_details"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"/>
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_dob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/date_of_birth" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_birth_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_dob"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/birth_time" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_dob"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_birth_place"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_birth_time"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/birth_place" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_birth_time"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_gotra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_birth_place"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/gotra" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_birth_place"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_rashi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_gotra"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/rashi" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_gotra"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_nakshtra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_rashi"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/nakshatra" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_rashi"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_Charan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_nakshtra"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/charan" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_nakshtra"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot1" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_naadi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_Charan"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/naadi" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_Charan"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_gan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_naadi"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/gan" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/tv_naadi"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:text="@string/dot" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dimen_5">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_birth_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_birth_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_birth_date"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_birth_place"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_birth_time"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_gotra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_birth_place"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_rashi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_gotra"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_nakshtra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_rashi"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_charan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_nakshtra"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_naadi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_charan"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_search_gan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_search_naadi"
+                            android:layout_marginBottom="@dimen/dimen_3" />
+
+
+                    </RelativeLayout>
+
+                </in.co.vsys.myssksamaj.custom_views.CustomTextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:id="@+id/tv_profileView_kundli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_astro_red"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:gravity="center_vertical"
+                    android:text="@string/kundli_photo"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/img_profileView_kundli"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/view_kundli_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/textColor"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

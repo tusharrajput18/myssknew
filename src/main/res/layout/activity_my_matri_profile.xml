@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/myProfile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dimen_5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/myProfile_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/profile_Cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginEnd="@dimen/dimen_5"
+                app:cardCornerRadius="@dimen/dimen_2"
+                app:cardElevation="@dimen/dimen_5"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorHind"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/profileView_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_10">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/myProfile_profile"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/circle_preview" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_profile_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|bottom"
+                            android:orientation="vertical">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/myProfile_Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_18" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/myProfile_memberId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:gravity="center"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomButton
+                                android:id="@+id/tv_myProfile_editProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dimen_40"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dimen_10"
+                                android:layout_marginBottom="@dimen/dimen_10"
+                                android:drawableLeft="@drawable/ic_edit_profile"
+                                android:gravity="center|start"
+                                android:padding="@dimen/dimen_10"
+                                android:text="@string/edit_profile"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorHind"
+                                android:textSize="@dimen/text_16"
+                                app:backgroundTint="@color/colorPrimaryDark" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/row_percent_totalProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_16" />
+
+                    <ProgressBar
+                        android:id="@+id/row_percentProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:layout_marginEnd="@dimen/dimen_10"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:max="100"
+                        android:maxHeight="10dp"
+                        android:minHeight="20dp"
+                        android:progressDrawable="@drawable/bg_horizontal_progress_bar" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/other_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginEnd="@dimen/dimen_5"
+                app:cardCornerRadius="@dimen/dimen_2"
+                app:cardElevation="@dimen/dimen_5"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/layout_myProfileInvite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dimen_5">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/invite_me"
+                            android:src="@drawable/ic_drafts_yellow_18dp" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:gravity="center"
+                            android:text="@string/invite_me"
+                            android:textColor="@color/colorHind"
+                            android:textSize="@dimen/text_16"
+                            android:textStyle="bold" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_myProfile_inviteCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:text="0"
+                            android:textColor="@color/colorHind"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_myProfileShortlist"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dimen_5">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/shortlist_me"
+
+                            android:src="@drawable/ic_favorite_black_18dp" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:gravity="center"
+                            android:text="@string/shortlist_me"
+                            android:textColor="@color/colorHind"
+                            android:textSize="@dimen/text_16"
+                            android:textStyle="bold" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_myProfile_shortlistCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:text="0"
+                            android:textColor="@color/colorHind"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_myProfileView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dimen_5">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/view_me"
+                            android:src="@drawable/ic_visibility_black_18dp" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:gravity="center"
+                            android:text="@string/view_me"
+                            android:textColor="@color/colorHind"
+                            android:textSize="@dimen/text_16"
+                            android:textStyle="bold" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_myProfile_ViewCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:text="0"
+                            android:textColor="@color/colorHind"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginEnd="@dimen/dimen_5"
+                android:layout_marginBottom="@dimen/dimen_5"
+                app:cardCornerRadius="@dimen/dimen_2"
+                app:cardElevation="@dimen/dimen_5"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dimen_5"
+                    android:paddingBottom="@dimen/dimen_5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_5">
+
+                            <ImageView
+                                android:id="@+id/img_myProfile_basicInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/basic_details"
+                                android:src="@mipmap/ic_basic_info" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_5"
+                                android:gravity="center"
+                                android:text="@string/basic_info"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_15" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_myProfileViewPhoto"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_5"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/img_myProfile_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/view_photos"
+                                android:src="@mipmap/ic_view_photos" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_5"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text="@string/view_photos"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_15" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_myProfileProfession"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_5"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/img_myProfile_professionInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/profession_info"
+                                android:src="@mipmap/ic_profile_profession" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_5"
+                                android:gravity="center"
+                                android:text="@string/profession_info"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_15" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_myProfileFAL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_5">
+
+                            <ImageView
+                                android:id="@+id/img_myProfile_familyInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/basic_details"
+                                android:src="@mipmap/ic_profile_family" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_5"
+                                android:gravity="center"
+                                android:text="@string/family_info"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_15" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_5"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/img_myProfile_astroInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/astro_info"
+                                android:src="@mipmap/ic_profile_astro" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_5"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text="@string/astro_info"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_15" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_5"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/img_myProfile_lifeStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/lifestyle"
+                                android:src="@mipmap/ic_profile_life_style" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_5"
+                                android:gravity="center"
+                                android:text="@string/lifestyle_info"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_15" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout_myProfileLookingFor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_5"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/img_myProfile_lookingFor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/looking_for"
+                                android:src="@mipmap/ic_profile_looking_for" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_5"
+                                android:gravity="center"
+                                android:text="@string/looking_for"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_15" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_myProfileViewProfile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_5">
+
+                            <ImageView
+                                android:id="@+id/img_myProfile_viewProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/looking_for"
+                                android:src="@mipmap/ic_view_profile" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_5"
+                                android:gravity="center"
+                                android:text="@string/view_profile"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_15" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_5">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/myProfile_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

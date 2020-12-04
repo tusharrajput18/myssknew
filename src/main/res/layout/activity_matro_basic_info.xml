@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/matroBasicRelative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BasicInfoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_basicInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dimen_5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_basicInfo"
+        app:cardCornerRadius="@dimen/dimen_2"
+        app:cardElevation="@dimen/dimen_5">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginBottom="@dimen/dimen_20"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/castLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/bg_border"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_matroBasicCast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_profile_mother_toungue"
+                        android:drawablePadding="@dimen/dimen_10"
+                        android:gravity="center|start"
+                        android:hint="@string/cast"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="@dimen/text_18" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/subCastLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_border"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_matroBasicSubCast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_profile_mother_toungue"
+                        android:drawablePadding="@dimen/dimen_10"
+                        android:gravity="center|start"
+                        android:hint="@string/sub_caste"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="@dimen/text_18" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/motherTongueLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/bg_border"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_matroBasicMTongue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_profile_mother_toungue"
+                        android:drawablePadding="@dimen/dimen_10"
+                        android:gravity="center|start"
+                        android:hint="@string/mother_tongue"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="@dimen/text_18" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/marriedStatusLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/bg_border"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_matroBasicmarriedStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/ic_profile_mother_toungue"
+                        android:drawablePadding="@dimen/dimen_10"
+                        android:gravity="center|start"
+                        android:hint="@string/married_status"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="@dimen/text_18" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/HeightLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/bg_border"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_matroBasicHeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/ic_profile_height"
+                        android:drawablePadding="@dimen/dimen_10"
+                        android:gravity="center|start"
+                        android:hint="@string/height_t"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="@dimen/text_18" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/MatroBasicCountryLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/bg_border"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_matroBasicCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/ic_profile_location"
+                        android:drawablePadding="@dimen/dimen_5"
+                        android:hint="@string/country"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="@dimen/text_18" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/matroBasicstateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/bg_border"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_matroBasicState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/ic_profile_location"
+                        android:drawablePadding="@dimen/dimen_5"
+                        android:hint="@string/state"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="@dimen/text_18" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/matroBasiccityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/bg_border"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_matroBasicCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@drawable/ic_profile_location"
+                        android:drawablePadding="@dimen/dimen_5"
+                        android:hint="@string/city"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="@dimen/text_18" />
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    app:hintTextAppearance="@style/TextHint">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                        android:id="@+id/edt_matroBasicAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_profile_location"
+                        android:drawablePadding="@dimen/dimen_5"
+                        android:hint="@string/address"
+                        android:inputType="text"
+                        android:padding="@dimen/dimen_10"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_18"
+                        app:backgroundTint="@color/colorHint" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@drawable/bg_border"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_kundli"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Upload Id Proof (Aadhar card/Pan card)"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_18" />
+
+                    <ImageView
+                        android:id="@+id/img_parentCamera"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_below="@id/tv_kundli"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:contentDescription="@string/camera"
+                        android:src="@drawable/id_preview" />
+
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    app:hintTextAppearance="@style/TextHint"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorBlack">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                        android:id="@+id/edt_matroBasicPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_profile_password"
+                        android:drawablePadding="@dimen/dimen_5"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/dimen_10"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_18"
+                        app:backgroundTint="@color/colorHint" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    app:hintTextAppearance="@style/TextHint"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorBlack">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                        android:id="@+id/edt_matroBasicConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_profile_password"
+                        android:drawablePadding="@dimen/dimen_5"
+                        android:hint="@string/confirm_password"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/dimen_10"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_18"
+                        app:backgroundTint="@color/colorHint" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <in.co.vsys.myssksamaj.custom_views.CustomButton
+                    android:id="@+id/btn_matroBasicNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginBottom="@dimen/dimen_20"
+                    android:background="@color/controlColor"
+                    android:text="@string/submit"
+                    android:textColor="@color/colorHind"
+                    android:textSize="@dimen/text_18" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/matroBasic_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

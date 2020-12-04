@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_businessSearch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="in.co.vsys.myssksamaj.business.BusinessSearchFragment">
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_3">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_weight="6">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_busi_search_name"
+                    android:layout_width="match_parent"
+                    android:gravity="bottom"
+                    app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:clipToPadding="false"
+                    android:layout_height="65dp">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/edt_busi_search_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:drawableLeft="@drawable/ic_search"
+                        android:drawablePadding="@dimen/dimen_10"
+                        android:ems="10"
+                        android:hint="@string/what"
+                        android:inputType="text"
+                        android:maxLines="2"
+                        android:padding="10dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/darker_gray"
+                        app:backgroundTint="@color/colorText" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/btn_busi_search_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:background="@android:color/transparent"
+                    android:paddingTop="@dimen/dimen_10"
+                    android:src="@drawable/ic_action_clear"
+                    android:visibility="gone" />
+
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/btn_search_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_action_search" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5">
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner_search_business_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_bg"
+                app:backgroundTint="@color/colorText">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_search_businessList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_layout"
+        android:layout_marginTop="@dimen/dimen_5">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progressBar_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_progress"
+        android:visibility="gone" />
+
+</RelativeLayout>

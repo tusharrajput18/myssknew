@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditProfessionInfoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_editProfessionInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dimen_5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_editProfessionInfo"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:layout_marginBottom="@dimen/dimen_10"
+        app:cardCornerRadius="@dimen/dimen_3"
+        app:cardElevation="@dimen/dimen_5">
+
+
+        <LinearLayout
+            android:id="@+id/edit_profession_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_10">
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_2"
+                android:text="@string/eduction"
+                android:textColor="@color/colorHint"
+                android:textSize="@dimen/text_18" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner_eProfession_eduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_3"
+                android:background="@drawable/bg_border"
+                android:padding="@dimen/dimen_5">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_2"
+                android:text="@string/eduction_in"
+                android:textColor="@color/colorHint"
+                android:textSize="@dimen/text_18" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner_eProfession_eduction_IN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_3"
+                android:background="@drawable/bg_border"
+                android:padding="@dimen/dimen_5">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_2"
+                android:text="@string/working_with"
+                android:textColor="@color/colorHint"
+                android:textSize="@dimen/text_18" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner_eProfession_workingWith"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_3"
+                android:background="@drawable/bg_border"
+                android:padding="@dimen/dimen_5">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_2"
+                android:text="@string/working_as"
+                android:textColor="@color/colorHint"
+                android:textSize="@dimen/text_18" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner_eProfession_workingAs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_3"
+                android:background="@drawable/bg_border"
+                android:padding="@dimen/dimen_5">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                    android:id="@+id/company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Company name" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_2"
+                android:text="@string/annual_income"
+                android:textColor="@color/colorHint"
+                android:textSize="@dimen/text_18" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner_eProfession_AIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_3"
+                android:background="@drawable/bg_border"
+                android:padding="@dimen/dimen_5">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomButton
+                android:id="@+id/btn_eProfession_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/button_bg"
+                android:minHeight="@dimen/dimen_40"
+                android:text="@string/update"
+                android:textColor="@color/colorHind"
+                app:backgroundTint="@color/controlColor" />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/my_eProfession_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

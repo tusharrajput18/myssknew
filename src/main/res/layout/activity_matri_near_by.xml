@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MatriNearByActivity">
+
+    <ProgressBar
+        android:id="@+id/matri_near_by_me_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_matri_nearBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dimen_5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_matriNearBY_backArrow"
+                android:layout_width="@dimen/dimen_25"
+                android:layout_height="@dimen/dimen_25"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/back_button"
+                android:src="@drawable/ic_arrow_back_white_18dp"
+                android:tint="@color/colorBlack" />
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:text="@string/near_by"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_18" />
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/img_refresh_matri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dimen_16"
+                android:src="@drawable/ic_action_referesh"
+                android:tint="@color/colorBlack" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/layout_displacement_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_matri_nearBy"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_margin_medium"
+            android:text="Select Distance In (Km.)" />
+
+        <Spinner
+            android:id="@+id/spn_select_displacement"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/padding_margin_medium"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/matri_map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_displacement_selection" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_displacement_selection"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_3">
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawable="@drawable/ic_location_yellow"
+            android:gravity="center|start"
+            android:text="@string/our_location"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_12" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_3"
+            android:drawableLeft="@drawable/ic_location_red"
+            android:gravity="center|start"
+            android:text="@string/candidate"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_12" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

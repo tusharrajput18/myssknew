@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/nav1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_matro_home"
+            android:icon="@drawable/ic_home_red"
+            android:title="@string/home"
+            app:iconTint="#ffffff" />
+        <item
+            android:id="@+id/nav_matro_search"
+            android:icon="@drawable/ic_search_red"
+            android:title="@string/search"
+            app:iconTint="@color/colorHind" />
+
+        <item
+            android:id="@+id/nav_matro_recently_matches"
+            android:icon="@drawable/ic_match_red"
+            android:title="@string/recently_matches"
+            app:iconTint="@color/colorHind" />
+        <item
+            android:id="@+id/nav_matro_recently_joint"
+            android:icon="@drawable/ic_joint_red"
+            android:title="@string/recently_joint"
+            app:iconTint="@color/colorHind" />
+
+        <item
+            android:id="@+id/nav_matro_profile_views"
+            android:icon="@drawable/ic_profile_view"
+            android:title="@string/recently_visitors"
+            app:iconTint="@color/colorHind" />
+
+        <item
+            android:id="@+id/nav_matro_profile_visitors"
+            android:icon="@drawable/ic_visitors_red"
+            android:title="@string/profile_visitors"
+            app:iconTint="@color/colorHind" />
+        <item
+            android:id="@+id/nav_matro_invite_list"
+            android:icon="@drawable/ic_invite_list"
+            app:actionViewClass="android.widget.TextView"
+            android:title="@string/invite_list"
+            app:iconTint="@color/colorHind" />
+
+        <item
+            android:id="@+id/nav_consummed_contact"
+            android:icon="@drawable/ic_contacts_white_24dp"
+            app:actionViewClass="android.widget.TextView"
+            android:title="@string/my_contact"
+            app:iconTint="@color/colorHind" />
+
+        <item
+            android:id="@+id/nav_matro_shortlist"
+            android:icon="@drawable/ic_shortlist_red"
+            android:title="@string/shortlist"
+            app:iconTint="@color/colorHind" />
+        <item
+            android:id="@+id/nav_matro_my_profile"
+            android:icon="@drawable/ic_profile_red"
+            android:title="@string/my_profile"
+            app:iconTint="@color/colorHind" />
+
+        <item
+            android:id="@+id/nav_matro_nearBy"
+            android:icon="@drawable/ic_near_by"
+            android:title="@string/near_by"
+            app:iconTint="@color/colorHind" />
+
+        <!--<item
+            android:id="@+id/nav_matro_nearBy"
+            android:icon="@drawable/ic_near_by"
+            android:title="@string/near_by"
+            app:iconTint="@color/colorHind" />-->
+
+        <item
+            android:id="@+id/nav_matro_notification"
+            android:icon="@drawable/ic_notification"
+            android:title="@string/notification"
+            app:iconTint="@color/colorHind" />
+
+        <item
+            android:id="@+id/nav_matro_chat"
+            android:icon="@drawable/ic_chat"
+            android:title="@string/chat"
+            app:iconTint="@color/colorHind" />
+
+        <item
+            android:id="@+id/nav_contact_myssk"
+            android:icon="@drawable/envelope"
+            android:title="@string/contact_us"
+            app:iconTint="@color/colorHind" />
+
+        <item
+            android:id="@+id/nav_matro_logout"
+            android:icon="@drawable/ic_exit_red"
+            android:title="@string/logout"
+            app:iconTint="@color/colorHind" />
+
+    </group>
+
+</menu>

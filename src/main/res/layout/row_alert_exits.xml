@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ndroid="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#dddddd"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_10">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        />
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Are you sure want to exit?"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_20"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <in.co.vsys.myssksamaj.custom_views.CustomButton
+            android:id="@+id/btn_exit_yes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yes"
+            app:elevation="@dimen/dimen_5"
+            android:textColor="@color/colorHind"
+            android:textSize="@dimen/text_16"
+            app:backgroundTint="@color/controlColor" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomButton
+            android:id="@+id/btn_exit_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:elevation="@dimen/dimen_5"
+            android:text="No"
+            android:textSize="@dimen/text_16"
+            app:backgroundTint="@color/colorPrimary"
+            ndroid:textColor="@color/colorBlack" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tab_background"
+    android:orientation="vertical"
+    tools:context=".activities.DonationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="5dp"
+                        android:gravity="center"
+                        android:text="Donation"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18dp"
+                        app:backgroundTint="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dimen_5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bank Name"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/text_14" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_5"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:background="@drawable/bg_border"
+                            android:padding="@dimen/dimen_10"
+                            android:text="Kotak Mahindra Bank"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_16" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/text_14" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_5"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:background="@drawable/bg_border"
+                            android:padding="@dimen/dimen_10"
+                            android:text="My Somvanshiya Sahstrarjun Kshatriya Samaj Ssk Digital Foundation"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_16" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="IFSC Code."
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/text_14" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_5"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:background="@drawable/bg_border"
+                            android:padding="@dimen/dimen_10"
+                            android:text="KKBK0000694"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_16" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Account no."
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/text_14" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dimen_5"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:background="@drawable/bg_border"
+                            android:padding="@dimen/dimen_10"
+                            android:text="3245388216"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_16" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:padding="@dimen/dimen_5"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="To see the candidate contact please make payment of  Rupeese 500/- into below Phone pay/Google pay"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/text_16" />
+
+                            <TextView
+                                android:padding="@dimen/dimen_5"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="This Payment is been charged just to authenticate the real presence of an candidate after making payment you can see only  100 contacts number of candidates."
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/text_16" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dimen_100"
+                                    android:layout_height="@dimen/dimen_100"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/dimen_20"
+                                    android:src="@drawable/gpay1" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/dimen_100"
+                                    android:layout_height="@dimen/dimen_100"
+                                    android:layout_weight="1"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/phonepay" />
+
+                            </LinearLayout>
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:elevation="5dp"
+                                android:gravity="center"
+                                android:text="8856007993"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/dimen_20"
+                                app:backgroundTint="@color/white" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

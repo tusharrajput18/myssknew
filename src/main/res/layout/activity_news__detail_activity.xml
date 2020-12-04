@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities_news.News_Detail_activity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_newsdetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/news_details_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_marginBottom="@dimen/dimen_50"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/img_news_detail_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_200"></ImageView>
+
+        <LinearLayout
+
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginHorizontal="@dimen/dimen_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imageview_title_logo"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_50"/>
+            <TextView
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:id="@+id/tv_news_detail_page_title"
+                android:layout_marginHorizontal="@dimen/dimen_10"
+                android:layout_gravity="center"
+                android:text="Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginVertical="@dimen/dimen_5"
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="@dimen/text_16"
+                android:text="text"
+                android:textColor="@color/black_font5"
+                android:id="@+id/tv_news_short_discription_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginVertical="@dimen/dimen_5"
+                android:background="@color/colorDrawerBack"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"/>
+
+            <TextView
+                android:textSize="@dimen/text_18"
+                android:text="text"
+                android:textColor="@color/black_font5"
+                android:id="@+id/tv_news_long_discription_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginVertical="@dimen/dimen_5"
+                android:background="@color/colorDrawerBack"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginHorizontal="@dimen/dimen_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_news_detail_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+      <!--  <ScrollView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginHorizontal="@dimen/dimen_5"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/img_news_detail_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"></ImageView>
+
+            </LinearLayout>
+        </ScrollView>-->
+    </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50">
+
+            <LinearLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:padding="@dimen/dimen_5"
+                android:weightSum="5"
+                android:layout_marginHorizontal="@dimen/dimen_5"
+                android:background="@drawable/button_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:maxLines="4"
+                    android:hint="Write a comment"
+                    android:id="@+id/et_send_comment_news_details"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <android.support.v7.widget.AppCompatImageButton
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_send_news_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_chat_send"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

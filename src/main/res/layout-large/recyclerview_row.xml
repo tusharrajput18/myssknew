@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_20"
+    android:layout_marginTop="?actionBarSize"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/ab"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@drawable/preview_background">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_scroll_profileImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/logo"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_preview" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/blocimageview"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/ic_block_black" />
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_image"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                        android:id="@+id/tv_scroll_memberId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/dimen_10"
+                        android:paddingEnd="@dimen/dimen_10"
+                        android:text="AS12345"
+                        android:textColor="@color/colorHind"
+                        android:textSize="18sp" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_profileView_online"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_online"
+                        android:drawablePadding="@dimen/dimen_2"
+                        android:gravity="center|start"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_5"
+                        android:text="@string/online"
+                        android:textColor="@color/colorHind"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_profileView_Offline"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_offline"
+                        android:drawablePadding="@dimen/dimen_5"
+                        android:gravity="center|start"
+                        android:paddingLeft="@dimen/dimen_10"
+                        android:paddingRight="@dimen/dimen_5"
+                        android:textColor="@color/colorHind"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <!--    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_scroll_online"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/ic_online"
+                            android:drawablePadding="@dimen/dimen_2"
+                            android:gravity="center|start"
+                            android:paddingLeft="@dimen/dimen_10"
+                            android:paddingRight="@dimen/dimen_5"
+                            android:text="@string/online"
+                            android:textColor="@color/colorHind"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_scroll_offline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_offline"
+                                android:drawablePadding="@dimen/dimen_5"
+                                android:paddingStart="@dimen/dimen_10"
+                                android:paddingEnd="@dimen/dimen_10"
+                                android:text="@string/offline"
+                                android:textColor="@color/colorHind"
+                                android:textSize="14sp" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_scroll_Offline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_2"
+                                android:paddingLeft="@dimen/dimen_10"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:textColor="@color/colorHind"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+    -->
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_scroll_profile_otherDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:paddingStart="@dimen/dimen_10"
+                            android:paddingEnd="@dimen/dimen_10"
+                            android:textColor="@color/colorHind"
+                            android:visibility="gone" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_scroll_profile_languageDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/dimen_10"
+                            android:paddingEnd="@dimen/dimen_10"
+                            android:textColor="@color/colorHind"
+                            android:visibility="gone" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_scroll_profile_ProfessionDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/dimen_10"
+                            android:paddingEnd="@dimen/dimen_10"
+                            android:textColor="@color/colorHind"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_scroll_profile_saleryDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:paddingStart="@dimen/dimen_10"
+                            android:paddingEnd="@dimen/dimen_10"
+                            android:textColor="@color/colorHind"
+                            android:visibility="gone" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_scroll_profile_marriedStatus1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/dimen_10"
+                            android:paddingEnd="@dimen/dimen_10"
+                            android:textColor="@color/colorHind"
+                            android:visibility="gone" />
+
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_scroll_profile_AddressDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingStart="@dimen/dimen_10"
+                            android:paddingEnd="@dimen/dimen_10"
+                            android:textColor="@color/colorHind"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@+id/ab"
+            android:layout_marginTop="0.5dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorHind"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_scroll_invite"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/invite"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/like"
+                    android:tint="@color/controlColor"
+                    android:visibility="visible" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:id="@+id/tv_scroll_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_scroll_invite"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/invite"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/img_scroll_invited"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/shortlist"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/like_file"
+                    android:tint="@color/controlColor"
+                    android:visibility="gone" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:id="@+id/tv_scroll_invited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_scroll_invited"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/invited"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_scroll_accept"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/shortlist"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/invitation_accept"
+                    android:tint="@color/controlColor"
+                    android:visibility="gone" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:id="@+id/tv_scroll_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_scroll_accept"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/accept"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/colorHind"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_scroll_shortlist"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/shortlist"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/shorlist"
+                    android:tint="@color/controlColor"
+                    android:visibility="visible" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:id="@+id/tv_scroll_shortlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_scroll_shortlist"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/shortlist"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/img_scroll_shortlisted"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/shortlist"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/shorlist_file"
+                    android:tint="@color/controlColor"
+                    android:visibility="gone" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:id="@+id/tv_scroll_shortlisted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_scroll_shortlisted"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/shortlisted"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/colorHind"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_scroll_chat"
+                    android:layout_width="@dimen/dimen_40"
+                    android:layout_height="@dimen/dimen_40"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/chat"
+                    android:tint="@color/controlColor" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/chat"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/img_premium"
+            android:layout_width="@dimen/dimen_80"
+            android:layout_height="@dimen/dimen_80"
+            android:src="@drawable/premium" />
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/block_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#88000000"
+            android:fitsSystemWindows="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/blocked_text"
+                android:text="@string/you_blocked_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_medium_large" />
+
+            <in.co.vsys.myssksamaj.custom_views.CustomButtonBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_margin_large"
+                android:background="@color/green"
+                android:id="@+id/unblock"
+                android:text="Unblock"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

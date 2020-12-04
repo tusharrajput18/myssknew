@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+<!--    <android.support.v7.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:background="@color/white"-->
+<!--        android:layout_height="?attr/actionBarSize">-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Business"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginRight="@dimen/dimen_10"-->
+<!--            android:textColor="@color/colorHint"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"/>-->
+<!--    </android.support.v7.widget.Toolbar>-->
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="vertical">-->
+<!--&lt;!&ndash;    <androidx.cardview.widget.CardView&ndash;&gt;-->
+<!--&lt;!&ndash;        xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+<!--&lt;!&ndash;        xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginHorizontal="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginVertical="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:cardBackgroundColor="#ffff"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:cardCornerRadius="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:cardElevation="3dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:clickable="true" >&ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_marginVertical="20dp">-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/et_businessname"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:inputType="text"-->
+<!--                    android:background="@null"-->
+<!--                    android:hint="Businesss Name*"-->
+<!--                    android:layout_marginVertical="@dimen/marginplus1"-->
+<!--                    android:layout_marginHorizontal="@dimen/marginplus4"-->
+<!--                    android:textSize="@dimen/textsizemedium" />-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@color/black_font5" />-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/et_mobileno"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:inputType="number"-->
+<!--                    android:maxLength="10"-->
+<!--                    android:background="@null"-->
+<!--                    android:hint="Mobile no"-->
+<!--                    android:layout_marginVertical="@dimen/marginplus1"-->
+<!--                    android:layout_marginHorizontal="@dimen/marginplus4"-->
+<!--                    android:textSize="@dimen/textsizemedium"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@color/black_font5" />-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/et_whatsappno"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:inputType="number"-->
+<!--                    android:maxLength="10"-->
+<!--                    android:background="@null"-->
+<!--                    android:hint="Whats App no"-->
+<!--                    android:layout_marginVertical="@dimen/marginplus1"-->
+<!--                    android:layout_marginHorizontal="@dimen/marginplus4"-->
+<!--                    android:textSize="@dimen/textsizemedium"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@color/black_font5" />-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/et_landlineno"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:inputType="number"-->
+<!--                    android:maxLength="10"-->
+<!--                    android:background="@null"-->
+<!--                    android:hint="Landline no"-->
+<!--                    android:layout_marginVertical="@dimen/marginplus1"-->
+<!--                    android:layout_marginHorizontal="@dimen/marginplus4"-->
+<!--                    android:textSize="@dimen/textsizemedium"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@color/black_font5" />-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/et_emailid"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:inputType="textEmailAddress"-->
+<!--                    android:hint="E-mail id"-->
+<!--                    android:background="@null"-->
+<!--                    android:layout_marginVertical="@dimen/marginplus1"-->
+<!--                    android:layout_marginHorizontal="@dimen/marginplus4"-->
+<!--                    android:textSize="@dimen/textsizemedium"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@color/black_font5" />-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/et_personname"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:inputType="textEmailAddress"-->
+<!--                    android:background="@null"-->
+<!--                    android:hint="Person Name"-->
+<!--                    android:layout_marginVertical="@dimen/marginplus1"-->
+<!--                    android:layout_marginHorizontal="@dimen/marginplus4"-->
+<!--                    android:textSize="@dimen/textsizemedium"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@color/black_font5" />-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/et_city"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:inputType="textEmailAddress"-->
+<!--                    android:background="@null"-->
+<!--                    android:hint="City*"-->
+<!--                    android:layout_marginVertical="@dimen/marginplus1"-->
+<!--                    android:layout_marginHorizontal="@dimen/marginplus4"-->
+<!--                    android:textSize="@dimen/textsizemedium"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+<!--        </LinearLayout>-->
+<!--&lt;!&ndash;    </androidx.cardview.widget.CardView>&ndash;&gt;-->
+<!--                </LinearLayout>-->
+<!--            </ScrollView>-->
+
+
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:gravity="bottom">-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="@dimen/textsizemedium"-->
+<!--                android:text="Continue"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:padding="@dimen/marginplus3"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:background="@drawable/rounded_bg"-->
+<!--                android:id="@+id/tv_btn_continue" />-->
+
+<!--        </LinearLayout>-->
+<!--    </FrameLayout>-->
+
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginVertical="20dp"-->
+<!--        android:layout_marginHorizontal="40dp"-->
+<!--        android:text="Continue"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:background="@drawable/rounded_bg"/>-->
+
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+<!--</LinearLayout>-->
+</LinearLayout>

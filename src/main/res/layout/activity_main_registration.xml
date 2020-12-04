@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registrationLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".activities.MainRegistrationActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_mainregistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_mainregistration">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_15">
+
+            <EditText
+                android:id="@+id/edt_regFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_border"
+                android:drawableLeft="@drawable/ic_profile_user"
+                android:drawablePadding="@dimen/dimen_5"
+                android:hint="@string/first_name"
+                android:inputType="text"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edt_regMiddleName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/bg_border"
+                android:drawableLeft="@drawable/ic_profile_user"
+                android:drawablePadding="@dimen/dimen_5"
+                android:hint="@string/fathers_name"
+                android:inputType="text"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edt_regLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/bg_border"
+                android:drawableLeft="@drawable/ic_profile_user"
+                android:drawablePadding="@dimen/dimen_5"
+                android:hint="@string/last_name"
+                android:inputType="text"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edt_regemailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/bg_border"
+                android:drawableLeft="@drawable/ic_profile_email"
+                android:drawablePadding="@dimen/dimen_5"
+                android:hint="@string/email_id"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edt_regMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:background="@drawable/bg_border"
+                android:drawableLeft="@drawable/ic_profile_phone"
+                android:drawablePadding="@dimen/dimen_5"
+                android:hint="@string/mobile_number"
+                android:inputType="number"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorHint" />
+
+            <Spinner
+                android:id="@+id/spinner_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:background="@drawable/bg_border"
+                android:padding="@dimen/dimen_5">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/spinner_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:background="@drawable/bg_border"
+                android:padding="@dimen/dimen_5">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/spinner_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:background="@drawable/bg_border"
+                android:padding="@dimen/dimen_5">
+
+            </Spinner>
+
+            <EditText
+                android:id="@+id/edt_regAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_border"
+                android:drawableLeft="@drawable/ic_profile_location"
+                android:drawablePadding="@dimen/dimen_5"
+                android:hint="@string/address"
+                android:inputType="text"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edt_regPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/bg_border"
+                android:drawableLeft="@drawable/ic_profile_password"
+                android:drawablePadding="@dimen/dimen_5"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorHint" />
+
+            <EditText
+                android:id="@+id/edt_regConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/bg_border"
+                android:drawableLeft="@drawable/ic_profile_password"
+                android:drawablePadding="@dimen/dimen_5"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorHint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:text="@string/upload_photo_id"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <ImageView
+                    android:id="@+id/img_uploadIdProof"
+                    android:layout_width="@dimen/dimen_100"
+                    android:layout_height="@dimen/dimen_100"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/upload_images"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/id_preview" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_register_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:background="@drawable/edittext_bg"
+                    android:gravity="center"
+                    android:text="Select Identity proof Image"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_registratioSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/button_bg"
+                android:minHeight="@dimen/dimen_40"
+                android:text="@string/register"
+                android:textColor="@color/colorHind"
+                app:backgroundTint="@color/controlColor" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/register_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_progress"
+        android:visibility="gone" />
+
+</RelativeLayout>

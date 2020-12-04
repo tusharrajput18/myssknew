@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditLifeStyleActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_editLifeStyleInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dimen_5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_editLifeStyleInfo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_10"
+                app:cardCornerRadius="@dimen/dimen_3"
+                app:cardElevation="@dimen/dimen_5">
+
+
+                <LinearLayout
+                    android:id="@+id/edit_looking_bPartner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/dimen_10">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_dietary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_dietary_habits"
+                            android:textColor="@color/colorHint"
+                            android:textSize="@dimen/text_18" />
+
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_dietary"
+                            android:layout_marginTop="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/lifeStyleEditVeg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_5"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:text="@string/vegetarian"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark"
+
+                                />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/lifeStyleEditNonVeg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_5"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:text="@string/non_vegetarian"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+
+                        </RadioGroup>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/dimen_10">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_drink"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_drinking_habits"
+                            android:textColor="@color/colorHint"
+                            android:textSize="@dimen/text_18" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_drink"
+                            android:layout_marginTop="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/lifeStyleEditDrinkYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_5"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:text="@string/yes"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/lifeStyleEditDrinkNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_5"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:text="@string/no"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/lifeStyleEditDrinkOcc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:text="@string/occasionally"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+
+                        </RadioGroup>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/dimen_10">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_smoke"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_smoking_habits"
+                            android:textColor="@color/colorHint"
+                            android:textSize="@dimen/text_18" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_smoke"
+                            android:layout_marginTop="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/lifeStyleEditSmokeYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_5"
+                                android:checked="false"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:text="@string/yes"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/lifeStyleEditSmokeNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_5"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:text="@string/no"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/lifeStyleEditSmokeOcc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:text="@string/occasionally"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                        </RadioGroup>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/dimen_10">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_bodyType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/body_type"
+                            android:textColor="@color/colorHint"
+                            android:textSize="@dimen/text_18" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_bodyType"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_5">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomCheckbox
+                                android:id="@+id/lifeStyleEditBodySlim"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/slim"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomCheckbox
+                                android:id="@+id/lifeStyleEditBodyAverage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/average"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomCheckbox
+                                android:id="@+id/lifeStyleEditBodyHeavy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/heavy"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/dimen_10">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_complexion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/complexion"
+                            android:textColor="@color/colorHint"
+                            android:textSize="@dimen/text_18" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_complexion"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dimen_5">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <in.co.vsys.myssksamaj.custom_views.CustomCheckbox
+                                    android:id="@+id/lifeStyleEditComplexionFair"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fair"
+                                    android:textColorHint="@color/colorBlack"
+                                    app:buttonTint="@color/colorPrimaryDark" />
+
+                                <in.co.vsys.myssksamaj.custom_views.CustomCheckbox
+                                    android:id="@+id/lifeStyleEditComplexionWheatish"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/wheatish"
+                                    android:textColorHint="@color/colorBlack"
+                                    app:buttonTint="@color/colorPrimaryDark" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <in.co.vsys.myssksamaj.custom_views.CustomCheckbox
+                                    android:id="@+id/lifeStyleEditComplexionWheatishBrown"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/wheatish_brown"
+                                    android:textColorHint="@color/colorBlack"
+                                    app:buttonTint="@color/colorPrimaryDark" />
+
+                                <in.co.vsys.myssksamaj.custom_views.CustomCheckbox
+                                    android:id="@+id/lifeStyleEditComplexionDark"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/dark"
+                                    android:textColorHint="@color/colorBlack"
+                                    app:buttonTint="@color/colorPrimaryDark" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/dimen_10">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_challeged"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Physical_challenged"
+                            android:textColor="@color/colorHint"
+                            android:textSize="@dimen/text_18" />
+
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_challeged"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:orientation="horizontal">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/lifeStyle_radio_PhysicalYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/dimen_5"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:text="@string/yes"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark"
+
+                                />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/lifeStyle_radio_PhysicalNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/dimen_5"
+                                android:paddingRight="@dimen/dimen_5"
+                                android:text="@string/no"
+                                android:textColorHint="@color/colorBlack"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                        </RadioGroup>
+
+                    </RelativeLayout>
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomButton
+                        android:id="@+id/btn_lifeStyleupdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_10"
+                        android:layout_marginStart="@dimen/dimen_10"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:background="@drawable/button_bg"
+                        android:minHeight="@dimen/dimen_40"
+                        android:text="@string/update"
+                        android:textColor="@color/colorHind"
+                        app:backgroundTint="@color/controlColor" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar_lifeStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

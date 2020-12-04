@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.co.vsys.myssksamaj.matrimonyguest.GuestSearchActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/profile_search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dimen_5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/profile_search_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                    android:id="@+id/edt_search_profileId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_5"
+                    android:layout_alignParentLeft="@dimen/dimen_5"
+                    android:layout_weight="2"
+                    android:hint="@string/search_by_id"
+                    app:backgroundTint="@color/textColor" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomButton
+                    android:id="@+id/btn_search_Search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/search"
+                    android:textColor="@color/colorHind"
+                    android:textSize="@dimen/text_18"
+                    app:backgroundTint="@color/controlColor" />
+
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <ImageView
+                android:layout_width="@dimen/dimen_40"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:src="@drawable/ic_or" />
+
+            <LinearLayout
+                android:id="@+id/layout_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_10">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_border"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:text="@string/search_your_match"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_18" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_5">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="@dimen/dimen_10"
+                    android:text="Select Gendor"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_13" />
+
+                <RadioGroup
+                    android:id="@+id/layout_search_bride"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10"
+                    android:visibility="visible">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                        android:id="@+id/radio_search_bride"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/bride"
+                        android:textColor="@color/colorBlack"
+                        app:buttonTint="@color/controlColor" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                        android:id="@+id/radio_search_groom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/groom"
+                        app:buttonTint="@color/controlColor" />
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_search_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/min_age"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/search_minAgeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:paddingLeft="@dimen/dimen_10"
+                        app:backgroundTint="@color/textColor">
+
+                    </android.support.v7.widget.AppCompatSpinner>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/max_age"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/search_maxAgeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:paddingLeft="@dimen/dimen_10"
+                        app:backgroundTint="@color/textColor">
+
+                    </android.support.v7.widget.AppCompatSpinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_search_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/min_height_1"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/search_minHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:paddingLeft="@dimen/dimen_10"
+                        app:backgroundTint="@color/textColor">
+
+                    </android.support.v7.widget.AppCompatSpinner>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/max_height_1"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/search_maxHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:paddingLeft="@dimen/dimen_10"
+                        app:backgroundTint="@color/textColor">
+
+                    </android.support.v7.widget.AppCompatSpinner>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_search_mTougue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <LinearLayout
+                    android:id="@+id/layout_search_motherTongue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_mother_tongue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mother_tongue"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_filter_mTongue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/any_mother_tounge"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_greater_than" />
+
+
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_search_marriedStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Married Status"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_search_married_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/any_married_status"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_greater_than" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_search_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/country"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_search_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/any_country"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_greater_than" />
+
+
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_search_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/state"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_search_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/any_state"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_greater_than" />
+
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_search_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/city"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_search_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/any_city"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_greater_than" />
+
+
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_search_eduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/eduction"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_search_eduction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/any_eduction"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_greater_than" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:orientation="vertical">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10"
+                        android:text="Physical Disability"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <RadioGroup
+                        android:id="@+id/layout_search_physical_disability"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dimen_10"
+                        android:visibility="visible">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                            android:id="@+id/radio_search_phisical_disabilty_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/dimen_10"
+                            android:text="@string/yes"
+                            android:textColor="@color/colorBlack"
+                            app:buttonTint="@color/controlColor" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                            android:id="@+id/radio_search_phisical_disabilty_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:checked="true"
+                            android:padding="@dimen/dimen_10"
+                            android:text="@string/no"
+                            app:buttonTint="@color/controlColor" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/textColor" />
+
+                <LinearLayout
+                    android:id="@+id/layout_search_profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/profession"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_13" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/search_spn_profession"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:paddingLeft="@dimen/dimen_10"
+                            app:backgroundTint="@color/textColor" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/textColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/annual_income"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/text_13" />
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/search_spn_income"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:paddingLeft="@dimen/dimen_10"
+                            app:backgroundTint="@color/textColor" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:orientation="vertical">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:text="Manglik"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_13" />
+
+                <RadioGroup
+                    android:id="@+id/radiogroup_SearchManglik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10"
+                    android:visibility="visible">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                        android:id="@+id/radio_yesManglik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10"
+                        android:text="Yes"
+                        android:textColor="@color/colorBlack"
+                        app:buttonTint="@color/controlColor" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                        android:id="@+id/radio_noManglik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10"
+                        android:text="No"
+                        app:buttonTint="@color/controlColor" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor" />
+
+            <LinearLayout
+                android:id="@+id/layout_search_income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:orientation="vertical">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/annual_income"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/text_13" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_search_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_10"
+                        android:text="@string/any_income"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_greater_than" />
+
+
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/textColor"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_search_bsearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_10"
+                android:visibility="visible">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomButton
+                    android:id="@+id/btn_search_FSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:background="@color/controlColor"
+                    android:padding="@dimen/dimen_1"
+                    android:scaleType="fitCenter"
+                    android:text="@string/search"
+                    android:textColor="@color/colorHind" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/search_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

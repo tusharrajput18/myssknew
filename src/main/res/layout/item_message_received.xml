@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorHind"
+    android:padding="@dimen/dimen_5">
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:id="@+id/receiver_message_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/chat_receiver_gray"
+        android:maxEms="14"
+        android:paddingStart="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_5"
+        android:paddingEnd="@dimen/dimen_10"
+        android:paddingBottom="@dimen/dimen_5"
+        android:text="hi..this for testing purpose.its working now chat.test the same as the other day and"
+        android:textColor="@color/colorHind"
+        android:textSize="@dimen/text_16" />
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:id="@+id/receiver_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/receiver_message_body"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:text="10:20"
+        android:textColor="#000000"
+        android:textSize="10sp" />
+
+</RelativeLayout>

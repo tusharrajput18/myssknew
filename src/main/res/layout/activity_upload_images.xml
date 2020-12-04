@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHind"
+    tools:context=".activities.UploadImagesActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dimen_5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_upload">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10"
+                android:text="@string/upload_profile_picture"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_18" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <ImageView
+                    android:id="@+id/img_addProfileImage"
+                    android:layout_width="@dimen/dimen_70"
+                    android:layout_height="@dimen/dimen_70"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/padding_margin_medium"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/add_camera" />
+
+                <ImageView
+                    android:id="@+id/img_profilePicture"
+                    android:layout_width="@dimen/dimen_150"
+                    android:layout_height="@dimen/dimen_150"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/padding_margin_medium"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/profile_picture"
+                    android:padding="@dimen/padding_margin_medium"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_preview_male"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_margin_medium"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Picture visible to" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_margin_small"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/main_pic_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_border"
+                            android:entries="@array/visible_to" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/main_pic_spinner"
+                            android:src="@drawable/ic_arrow_down_grey" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorBlack" />
+
+            <LinearLayout
+                android:id="@+id/layout_uploadOtherPhtos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10"
+                    android:text="@string/select_other_photos_optional"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_18" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <ImageView
+                        android:id="@+id/img_addOneImage"
+                        android:layout_width="@dimen/dimen_70"
+                        android:layout_height="@dimen/dimen_70"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/add_camera" />
+
+                    <ImageView
+                        android:id="@+id/img_OhterPictureOne"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_150"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_picture"
+                        android:padding="@dimen/padding_margin_medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_preview_male"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Picture visible to" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_margin_small"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/show_to_spinner1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_border"
+                                android:entries="@array/visible_to" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/main_pic_spinner"
+                                android:src="@drawable/ic_arrow_down_grey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <ImageView
+                        android:id="@+id/img_addTwoImage"
+                        android:layout_width="@dimen/dimen_70"
+                        android:layout_height="@dimen/dimen_70"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/add_camera" />
+
+                    <ImageView
+                        android:id="@+id/img_OhterPictureTwo"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_150"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_picture"
+                        android:padding="@dimen/padding_margin_medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_preview_male"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Picture visible to" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_margin_small"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/show_to_spinner2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_border"
+                                android:entries="@array/visible_to" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/main_pic_spinner"
+                                android:src="@drawable/ic_arrow_down_grey" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <ImageView
+                        android:id="@+id/img_addThreeImage"
+                        android:layout_width="@dimen/dimen_70"
+                        android:layout_height="@dimen/dimen_70"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/add_camera" />
+
+                    <ImageView
+                        android:id="@+id/img_OhterPictureThree"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_150"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_picture"
+                        android:padding="@dimen/padding_margin_medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_preview_male"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Picture visible to" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_margin_small"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/show_to_spinner3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_border"
+                                android:entries="@array/visible_to" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/main_pic_spinner"
+                                android:src="@drawable/ic_arrow_down_grey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <ImageView
+                        android:id="@+id/img_addFourImage"
+                        android:layout_width="@dimen/dimen_70"
+                        android:layout_height="@dimen/dimen_70"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/add_camera" />
+
+                    <ImageView
+                        android:id="@+id/img_OhterPictureFour"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_150"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_picture"
+                        android:padding="@dimen/dimen_20"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_preview_male"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Picture visible to" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_margin_small"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/show_to_spinner4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_border"
+                                android:entries="@array/visible_to" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/main_pic_spinner"
+                                android:src="@drawable/ic_arrow_down_grey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <ImageView
+                        android:id="@+id/img_addFiveImage"
+                        android:layout_width="@dimen/dimen_70"
+                        android:layout_height="@dimen/dimen_70"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/add_camera" />
+
+                    <ImageView
+                        android:id="@+id/img_OhterPictureFive"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_150"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_picture"
+                        android:padding="@dimen/padding_margin_medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_preview_male"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Picture visible to" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_margin_small"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/show_to_spinner5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_border"
+                                android:entries="@array/visible_to" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/main_pic_spinner"
+                                android:src="@drawable/ic_arrow_down_grey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <ImageView
+                        android:id="@+id/img_addSixImage"
+                        android:layout_width="@dimen/dimen_70"
+                        android:layout_height="@dimen/dimen_70"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/add_camera" />
+
+                    <ImageView
+                        android:id="@+id/img_OhterPictureSix"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_150"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_picture"
+                        android:padding="@dimen/padding_margin_medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_preview_male"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Picture visible to" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_margin_small"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/show_to_spinner6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_border"
+                                android:entries="@array/visible_to" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/main_pic_spinner"
+                                android:src="@drawable/ic_arrow_down_grey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <ImageView
+                        android:id="@+id/img_addSevenImage"
+                        android:layout_width="@dimen/dimen_70"
+                        android:layout_height="@dimen/dimen_70"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/add_camera" />
+
+                    <ImageView
+                        android:id="@+id/img_OhterPictureSeven"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_150"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_picture"
+                        android:padding="@dimen/padding_margin_medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_preview_male"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Picture visible to" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_margin_small"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/show_to_spinner7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_border"
+                                android:entries="@array/visible_to" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/main_pic_spinner"
+                                android:src="@drawable/ic_arrow_down_grey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <ImageView
+                        android:id="@+id/img_addEightImage"
+                        android:layout_width="@dimen/dimen_70"
+                        android:layout_height="@dimen/dimen_70"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/add_camera" />
+
+                    <ImageView
+                        android:id="@+id/img_OhterPictureEight"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_150"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_picture"
+                        android:padding="@dimen/padding_margin_medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_preview_male"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Picture visible to" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_margin_small"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/show_to_spinner8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_border"
+                                android:entries="@array/visible_to" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/main_pic_spinner"
+                                android:src="@drawable/ic_arrow_down_grey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <ImageView
+                        android:id="@+id/img_addNineImage"
+                        android:layout_width="@dimen/dimen_70"
+                        android:layout_height="@dimen/dimen_70"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/add_camera" />
+
+                    <ImageView
+                        android:id="@+id/img_OhterPictureNine"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_150"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_picture"
+                        android:padding="@dimen/padding_margin_medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_preview_male"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Picture visible to" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_margin_small"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/show_to_spinner9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_border"
+                                android:entries="@array/visible_to" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/main_pic_spinner"
+                                android:src="@drawable/ic_arrow_down_grey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <ImageView
+                        android:id="@+id/img_addTenImage"
+                        android:layout_width="@dimen/dimen_70"
+                        android:layout_height="@dimen/dimen_70"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/add_camera" />
+
+                    <ImageView
+                        android:id="@+id/img_OhterPictureTen"
+                        android:layout_width="@dimen/dimen_150"
+                        android:layout_height="@dimen/dimen_150"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_picture"
+                        android:padding="@dimen/padding_margin_medium"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_preview_male"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_margin_medium"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Picture visible to" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/padding_margin_small"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/show_to_spinner10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/bg_border"
+                                android:entries="@array/visible_to" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/main_pic_spinner"
+                                android:src="@drawable/ic_arrow_down_grey" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomButtonBold
+                android:id="@+id/btn_matroFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:background="@drawable/button_bg"
+                android:minHeight="@dimen/dimen_40"
+                android:text="@string/submit"
+                android:textColor="@color/colorHind"
+                app:backgroundTint="@color/controlColor" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/Upload_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

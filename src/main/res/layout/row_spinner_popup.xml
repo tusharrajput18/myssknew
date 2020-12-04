@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/controlColor"
+        android:clickable="true"
+        android:focusable="true">
+
+    </android.support.v7.widget.SearchView>
+
+    <ListView
+        android:id="@+id/AlertSearchList"
+        android:layout_width="match_parent"
+        android:layout_height="514dp"
+        android:layout_marginTop="5dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp">
+    </ListView>
+    <Button
+        android:text="Sellect"
+        android:id="@+id/btn_ok_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

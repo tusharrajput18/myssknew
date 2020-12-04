@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        card_view:cardCornerRadius="@dimen/dimen_1"
+        card_view:cardElevation="@dimen/dimen_5"
+        card_view:cardUseCompatPadding="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_7">
+
+            <ImageView
+                android:id="@+id/img_profileVisitedImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/profile_image"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_preview" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/img_premium"
+            android:layout_width="@dimen/dimen_50"
+            android:layout_height="@dimen/dimen_50"
+            android:src="@drawable/premium" />
+
+        </FrameLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

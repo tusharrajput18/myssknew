@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_2"
+    android:layout_marginEnd="@dimen/dimen_3"
+    android:layout_marginStart="@dimen/dimen_3"
+    android:layout_marginTop="@dimen/dimen_2"
+    card_view:cardCornerRadius="@dimen/dimen_3"
+    card_view:cardUseCompatPadding="true">
+    
+    <RelativeLayout
+        android:id="@+id/linearLayout_invitation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:padding="@dimen/dimen_10">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/invitation_imageView"
+            android:layout_width="@dimen/dimen_150"
+            android:layout_height="@dimen/dimen_150"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/img_preview"
+            card_view:civ_border_color="@android:color/darker_gray"
+            card_view:civ_border_width="@dimen/dimen_1" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+            android:id="@+id/tv_invitation_memberId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/invitation_imageView"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text="KK12345"
+            android:textColor="@color/controlColor"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold|normal" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/tv_invitation_age_height_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_invitation_memberId"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dimen_2"
+            android:textSize="@dimen/text_14" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/tv_invitation_city_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_invitation_age_height_language"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dimen_2"
+            android:textSize="@dimen/text_14" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/tv_invitation_workingWith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_invitation_city_country"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/dimen_2"
+            android:layout_marginTop="@dimen/dimen_2"
+            android:textSize="@dimen/text_14" />
+
+        <View
+            android:id="@+id/view_invitation"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tv_invitation_workingWith"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:background="@android:color/darker_gray" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_invitation"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_5">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_invitation_chat"
+                android:layout_width="@dimen/dimen_50"
+                android:layout_height="@dimen/dimen_50"
+                android:tint="@color/controlColor"
+                card_view:srcCompat="@drawable/chat" />
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:id="@+id/tv_invitation_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:text="@string/chat"
+                android:textColor="#a1a1a1" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

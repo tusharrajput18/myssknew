@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorHind"
+    android:paddingTop="@dimen/dimen_5">
+
+    <LinearLayout
+        android:layout_marginRight="70dp"
+        android:id="@+id/msg_received_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/rounded_rect_blue"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_margin_small"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/dimen_25"
+            android:id="@+id/reply_received_msg_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rect_green"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_margin_small"
+            android:visibility="gone">
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:id="@+id/reply_receiver_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SenderName" />
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:id="@+id/reply_receiver_message_to_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SenderName"
+                android:textColor="@color/colorBlack" />
+
+        </LinearLayout>
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/received_message_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_margin_small"
+            android:textSize="@dimen/textsize_medium" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/received_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/send_message_body"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/padding_margin_small"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:textSize="@dimen/textsize_xsmall" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/msg_sent_container"
+        android:layout_marginLeft="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/rounded_rect_green"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_margin_small"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/reply_sent_msg_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rounded_rect_blue"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_margin_medium"
+            android:visibility="gone">
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:id="@+id/reply_sender_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SenderName" />
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:id="@+id/reply_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SenderName"
+                android:textColor="@color/colorBlack" />
+
+        </LinearLayout>
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/send_message_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_5"
+            android:padding="@dimen/padding_margin_small"
+            android:textSize="@dimen/textsize_medium" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_message_sent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+           >
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:id="@+id/send_message_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/textsize_xsmall" />
+
+            <ImageView
+                android:id="@+id/img_message_send"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_margin_small"
+                android:layout_toRightOf="@id/send_message_time"
+                android:src="@drawable/ic_check_grey" />
+
+            <ImageView
+                android:id="@+id/img_message_status_deliverd"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_margin_small"
+                android:layout_toRightOf="@id/send_message_time"
+                android:src="@drawable/ic_double_check_gray" />
+
+            <ImageView
+                android:id="@+id/img_message_status_seen"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_margin_small"
+                android:layout_toRightOf="@id/send_message_time"
+                android:src="@drawable/ic_double_check_blue" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

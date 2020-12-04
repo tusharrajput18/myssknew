@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorHind"
+    android:layout_marginTop="?actionBarSize"
+    tools:context=".NewsHomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+  <!--  <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/business_main_toolbar"
+        android:layout_height="?actionBarSize"/>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_news_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:id="@+id/news_Home_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Register Business"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/text_18"
+            android:fontFamily="serif"
+            android:textColor="@color/colorBlack"
+            android:gravity="start"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Business Directory"
+            android:layout_gravity="end"
+            android:textSize="@dimen/text_18"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:fontFamily="serif"
+            android:textColor="@color/colorBlack"
+            android:gravity="end"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/com"
+        />
+
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="4">
+
+         <android.support.v4.view.ViewPager
+             android:id="@+id/business_pager"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+         </android.support.v4.view.ViewPager>
+
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="6"
+         android:background="@android:color/white"
+         >
+
+         <android.support.design.widget.TabLayout
+             android:id="@+id/tabs_businessDash"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@android:color/white"
+             app:tabMode="fixed"
+             app:tabSelectedTextColor="@android:color/black"
+             android:padding="@dimen/_3sdp">
+
+         </android.support.design.widget.TabLayout>
+
+         <android.support.v4.view.ViewPager
+             android:id="@+id/viewPager_businessTab"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@+id/tabs_businessDash"
+             app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+         </android.support.v4.view.ViewPager>
+
+         <ProgressBar
+             android:id="@+id/businessHome_progressBar"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:visibility="gone" />
+
+     </RelativeLayout>-->
+
+</RelativeLayout>

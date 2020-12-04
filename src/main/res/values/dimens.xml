@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_15">15sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_25">25sp</dimen>
+    <dimen name="text_30">30sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_17">17sp</dimen>
+    <dimen name="dimen_1">1dp</dimen>
+    <dimen name="dimen_2">2dp</dimen>
+    <dimen name="dimen_3">3dp</dimen>
+    <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_25">25dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+    <dimen name="dimen_80">80dp</dimen>
+    <dimen name="dimen_100">100dp</dimen>
+
+    <dimen name="image_width">100dp</dimen>
+    <dimen name="image_final_width">32dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="expanded_toolbar_height">200dp</dimen>
+    <dimen name="textsize_large">20sp</dimen>
+    <dimen name="textsize_xsmall">10sp</dimen>
+    <dimen name="textsize_small">14sp</dimen>
+    <dimen name="textsize_medium">18sp</dimen>
+    <dimen name="textsize_xlarge">30sp</dimen>
+    <dimen name="spacing_small">12dp</dimen>
+    <dimen name="spacing_xsmall">10dp</dimen>
+    <dimen name="spacing_xxsmall">6dp</dimen>
+    <dimen name="border_width">2dp</dimen>
+    <dimen name="image_small_width">32dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="dimen_25sp">25sp</dimen>
+    <dimen name="dimen_7">7dp</dimen>
+    <dimen name="dimen_70">70dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="text_40">40sp</dimen>
+    <dimen name="dimen_200">200dp</dimen>
+    <dimen name="dimen_150">150dp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_13">13sp</dimen>
+    <dimen name="dimen_76">76dp</dimen>
+
+    <dimen name="padding_margin_small">5dp</dimen>
+    <dimen name="padding_margin_medium">10dp</dimen>
+    <dimen name="padding_margin_medium_large">15dp</dimen>
+    <dimen name="padding_margin_large">20dp</dimen>
+    <dimen name="padding_margin_xlarge">30dp</dimen>
+    <dimen name="textsize_medium_large">18sp</dimen>
+    <dimen name="thumbsize">48dp</dimen>
+
+    <string name="internet_error">Please check internet connection</string>
+    <string name="unsuccessful_upload_message">There was a problem uploading data. Please try again</string>
+</resources>

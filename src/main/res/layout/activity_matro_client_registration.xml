@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/matro_Reglayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHind"
+    tools:context=".activities.CandidateRegistrationActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_clientReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dimen_5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_clientReg"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/dimen_2"
+            app:cardElevation="@dimen/dimen_5">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/layout_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:background="@drawable/bg_border"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dimen_10">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/profile_managed_by"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup_profileManageBy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/radio_profileManageBySelf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:hint="@string/manged_self"
+                                android:textColorHint="@color/colorHint"
+                                android:textSize="@dimen/text_16"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/radio_profileManageByParent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/parent"
+                                android:textColorHint="@color/colorHint"
+                                android:textSize="@dimen/text_16"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/radio_profileManageBySibling"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/sibling"
+                                android:textColorHint="@color/colorHint"
+                                android:textSize="@dimen/text_16"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:background="@drawable/bg_border"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dimen_10">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/gender"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup_Gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/radio_male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:checked="true"
+                                android:hint="@string/male"
+                                android:textColorHint="@color/colorHint"
+                                android:textSize="@dimen/text_16"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomRadioButton
+                                android:id="@+id/radio_female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/female"
+                                android:textColorHint="@color/colorHint"
+                                android:textSize="@dimen/text_16"
+                                app:buttonTint="@color/colorPrimaryDark" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        app:hintTextAppearance="@style/TextHint">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                            android:id="@+id/edt_matroRegFirstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_profile_user"
+                            android:drawablePadding="@dimen/dimen_5"
+                            android:hint="@string/first_name"
+                            android:inputType="text"
+                            android:padding="@dimen/dimen_10"
+                            android:textColor="@color/colorBlack"
+                            app:backgroundTint="@color/colorHint" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        app:hintTextAppearance="@style/TextHint">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                            android:id="@+id/edt_matroRegMiddleName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_profile_user"
+                            android:drawablePadding="@dimen/dimen_5"
+                            android:hint="@string/fathers_name"
+                            android:inputType="text"
+                            android:padding="@dimen/dimen_10"
+                            android:textColor="@color/colorBlack"
+                            app:backgroundTint="@color/colorHint" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        app:hintTextAppearance="@style/TextHint">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                            android:id="@+id/edt_matroRegLastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_profile_user"
+                            android:drawablePadding="@dimen/dimen_5"
+                            android:hint="@string/last_name"
+                            android:inputType="text"
+                            android:padding="@dimen/dimen_10"
+                            android:textColor="@color/colorBlack"
+                            app:backgroundTint="@color/colorHint" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                        android:id="@+id/tv_matroRegDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:background="@drawable/bg_border"
+                        android:drawableLeft="@drawable/ic_profile_date"
+                        android:drawablePadding="@dimen/dimen_5"
+                        android:gravity="start|center"
+                        android:hint="@string/date_of_birth"
+                        android:padding="@dimen/dimen_10"
+                        android:textColor="@color/colorBlack"
+                        android:textColorHint="@color/colorHint"
+                        android:textSize="17sp" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        app:hintTextAppearance="@style/TextHint">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                            android:maxLength="10"
+                            android:id="@+id/edt_matroRegMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_profile_phone"
+                            android:drawablePadding="@dimen/dimen_5"
+                            android:hint="@string/mobile_number"
+                            android:inputType="phone"
+                            android:padding="@dimen/dimen_10"
+                            android:textColor="@color/colorBlack"
+                            app:backgroundTint="@color/colorHint" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        app:hintTextAppearance="@style/TextHint">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                            android:id="@+id/edt_matroRegEmailId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_profile_email"
+                            android:drawablePadding="@dimen/dimen_5"
+                            android:hint="@string/email_id"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/dimen_10"
+                            android:textColor="@color/colorBlack"
+                            app:backgroundTint="@color/colorHint" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:background="@drawable/bg_border"
+                        android:padding="@dimen/dimen_10">
+
+                        <TextView
+                            android:id="@+id/tv_kundli"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Upload profile picture"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_18" />
+
+                        <ImageView
+                            android:id="@+id/img_parentCamera"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_below="@id/tv_kundli"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/dimen_10"
+                            android:contentDescription="@string/camera"
+                            android:src="@drawable/id_preview" />
+
+                    </RelativeLayout>
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomButton
+                        android:id="@+id/btn_matroRegNext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:layout_marginBottom="@dimen/dimen_10"
+                        android:background="@color/controlColor"
+                        android:text="@string/next"
+                        android:textColor="@color/colorHind"
+                        android:textSize="@dimen/text_18" />
+
+                    </LinearLayout>
+
+                        <ProgressBar
+                            android:visibility="gone"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/register_progress"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

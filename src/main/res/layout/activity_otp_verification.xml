@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".maindirectory.OtpVerificationActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_otp_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dimen_5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"></android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dimen_25"
+                    android:gravity="center"
+                    android:text="Please wait SMS delivery sometimes take of 2 to 5 minutes"
+                    android:textColor="@color/businesstextcolor"
+                    android:textSize="@dimen/text_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_15"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter OTP"
+                        android:textColor="@color/businesstextcolor"
+                        android:textSize="@dimen/text_14" />
+
+                    <com.alimuzaffar.lib.pin.PinEntryEditText
+                        android:id="@+id/app_pin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_20"
+                        android:background="@drawable/rectangle"
+                        android:cursorVisible="false"
+                        android:digits="1234567890"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textIsSelectable="false"
+                        android:textSize="20sp"
+                        app:pinAnimationType="popIn" />
+
+                    <TextView
+                        android:id="@+id/tv_verify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dimen_15"
+                        android:background="@drawable/bg_border_text_fill"
+                        android:paddingHorizontal="@dimen/dimen_40"
+                        android:paddingVertical="@dimen/dimen_10"
+                        android:text="Verify"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_14" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressbar_otpverification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_10"
+                android:text="Don't Receive the OTP?"
+                android:textColor="#000"
+                android:textSize="@dimen/text_16" />
+
+            <TextView
+                android:id="@+id/tv_resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Resend OTP"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_18"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

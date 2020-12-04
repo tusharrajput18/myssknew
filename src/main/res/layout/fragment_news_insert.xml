@@ -1,0 +1,319 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorHind"
+    android:layout_marginTop="?actionBarSize"
+    tools:context=".NewsInsertFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+  <!--  <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/business_main_toolbar"
+        android:layout_height="?actionBarSize"/>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/rectangle"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_newstitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:inputType="textMultiLine"
+                                android:maxLines="5"
+                                android:background="@null"
+                                android:hint="News Title"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_shortdescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:inputType="textMultiLine"
+                                android:maxLines="15"
+                                android:background="@null"
+                                android:hint="Short Description"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <TextView
+                            android:id="@+id/tv_filepath"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:padding="10dp"
+                            android:text="Click to upload image or video"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_personname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="text"
+                                android:background="@null"
+                                android:hint="Person Name"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <Spinner
+                            android:id="@+id/sp_newstype"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_whatsappno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:inputType="number"
+                                android:background="@null"
+                                android:hint="Whats App no"
+                                android:maxLength="10"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/iv_profile"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/img_preview"/>
+                            <ImageView
+                                android:id="@+id/iv_camera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_photo_camera"
+                                android:layout_alignRight="@+id/iv_profile"
+                                android:layout_marginLeft="@dimen/dimen_80"
+                                android:layout_alignLeft="@+id/iv_profile" />
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_gravity="bottom"
+                            android:layout_margin="20dp"
+                            android:gravity="bottom">
+                            <TextView
+                                android:id="@+id/tv_continue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/text_16"
+                                android:text="Continue"
+                                android:gravity="center"
+                                android:layout_centerInParent="true"
+                                android:padding="@dimen/dimen_15"
+                                android:textColor="@color/white"
+                                android:background="@drawable/rounded_bg" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+
+
+        </LinearLayout>
+        <ProgressBar
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:id="@+id/news_Home_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Register Business"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/text_18"
+            android:fontFamily="serif"
+            android:textColor="@color/colorBlack"
+            android:gravity="start"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Business Directory"
+            android:layout_gravity="end"
+            android:textSize="@dimen/text_18"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:fontFamily="serif"
+            android:textColor="@color/colorBlack"
+            android:gravity="end"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/com"
+        />
+
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="4">
+
+         <android.support.v4.view.ViewPager
+             android:id="@+id/business_pager"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+         </android.support.v4.view.ViewPager>
+
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="6"
+         android:background="@android:color/white"
+         >
+
+         <android.support.design.widget.TabLayout
+             android:id="@+id/tabs_businessDash"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@android:color/white"
+             app:tabMode="fixed"
+             app:tabSelectedTextColor="@android:color/black"
+             android:padding="@dimen/_3sdp">
+
+         </android.support.design.widget.TabLayout>
+
+         <android.support.v4.view.ViewPager
+             android:id="@+id/viewPager_businessTab"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@+id/tabs_businessDash"
+             app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+         </android.support.v4.view.ViewPager>
+
+         <ProgressBar
+             android:id="@+id/businessHome_progressBar"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:visibility="gone" />
+
+     </RelativeLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,618 @@
+<resources>
+    <string name="app_name">My SSK Samaj</string>
+    <string name="google_map_api_key">AIzaSyDorCalFDNbceGCtjwS6yk9Y5Oy3Ybni0c</string>
+    <string name="email_id">Email Id</string>
+    <string name="first_name">First Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="last_name">Last Name</string>
+    <string name="fathers_name">Father\'s Name</string>
+    <!--<string name="middle_name">Middle Name</string>-->
+    <string name="upload_images">Upload Images</string>
+    <string name="cancel">Cancel</string>
+    <string name="register">Register</string>
+    <string name="upload_photo_id">Upload Photo Id</string>
+    <string name="upload_id_proof">Upload Id Proof (Adhar card /Pan card)</string>
+    <string name="login">Login</string>
+    <string name="forget_password"><u>Forgot password?</u> </string>
+    <string name="guest">Guest</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="next">Next</string>
+    <string name="about_family">About Family</string>
+    <string name="desired_partner_introduction">Desired Partner Introduction</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="facebook">Facebook</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="add_kundli">add kundli</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="birth_time">Select Birth Time</string>
+    <string name="finish">Finish</string>
+    <string name="vegetarian">Vegetarian</string>
+    <string name="non_vegetarian">Non-Vegetarian</string>
+    <string name="select_drinking_habits">Select Drinking Habits</string>
+    <string name="select_dietary_habits">Select Dietary Habits</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="occasionally">Occasionally</string>
+    <string name="select_smoking_habits">Select Smoking Habits</string>
+    <string name="mother_tongue">Mother Tongue</string>
+    <string name="married_status">Marital Status</string>
+    <string name="height">Height </string>
+    <string name="height_t">Height</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="eduction">Education</string>
+    <string name="eduction_in">Education In</string>
+    <string name="working_with">Working With</string>
+    <string name="working_as">Working As</string>
+    <string name="annual_income">Annual Income</string>
+    <string name="father_status">Father Status</string>
+    <string name="with">With</string>
+    <string name="as">As</string>
+    <string name="mother_status">Mother Status</string>
+    <string name="not_married">Not Married</string>
+    <string name="married">Married</string>
+    <string name="joint">Joint</string>
+    <string name="nuclear">Nuclear</string>
+    <string name="to">Max Age</string>
+    <string name="age">Age </string>
+    <string name="eduction_area">Education Area</string>
+    <string name="profession_area">Profession Area</string>
+    <string name="body_type">Body Type</string>
+    <string name="birth_place">Birth Place</string>
+    <string name="gotra">Gotra</string>
+    <string name="rashi">Rashi</string>
+    <string name="nakshatra">Nakshatra</string>
+    <string name="charan">Charan</string>
+    <string name="naadi">Naadi</string>
+    <string name="gan">Gan</string>
+    <string name="upload_kundli">Upload Kundli</string>
+    <string name="search">Search</string>
+    <string name="search_list">Search List Activity</string>
+    <string name="profile_for">Profile for</string>
+    <string name="sibling">Sibling</string>
+    <string name="parent">Parent</string>
+    <string name="self">Candidate</string>
+
+    <string name="updatetitle">New update available!</string>
+
+    <!-- validation strings  !-->
+
+    <string name="empty_editText">Fields can not be empty…!</string>F
+    <string name="internet_connection">No internet connection…!</string>
+    <string name="retry">Retry</string>
+    <string name="designation">Designation</string>
+    <string name="company_name">Company Name</string>
+    <string name="_0">0</string>
+    <string name="min_age">Min Age</string>
+    <string name="min_height">Min</string>
+    <string name="max_height">Max</string>
+    <string name="eduction_information">Education Information</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="submit">Submit</string>
+    <string name="address">Address</string>
+    <string name="professional_info">Professional Information</string>
+    <string name="location">Location</string>
+    <string name="partner_preference">Partner Preference</string>
+    <string name="professional_preference">Professional Preference</string>
+    <string name="location_preference">Location Preference</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="inches">1\'5"</string>
+
+    <string-array name="visible_to">
+
+        <item>Candidate</item>
+        <item>Parent</item>
+        <item>Both</item>
+
+    </string-array>
+
+    <!--  string arrays for spinner dropdown !-->
+
+    <string-array name="drop_age">
+        <item><b>--Select Age--</b></item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+    </string-array>
+
+    <string-array name="drop_height">
+        <item><b>--Select Height--</b></item>
+        <item>4.0 ft</item>
+        <item>4.1 ft</item>
+        <item>4.2 ft</item>
+        <item>4.3 ft</item>
+        <item>4.4 ft</item>
+        <item>4.5 ft</item>
+        <item>4.6 ft</item>
+        <item>4.7 ft</item>
+        <item>4.8 ft</item>
+        <item>4.9 ft</item>
+        <item>4.10 ft</item>
+        <item>4.11 ft</item>
+        <item>5.0 ft</item>
+        <item>5.1 ft</item>
+        <item>5.2 ft</item>
+        <item>5.3 ft</item>
+        <item>5.4 ft</item>
+        <item>5.5 ft</item>
+        <item>5.6 ft</item>
+        <item>5.7 ft</item>
+        <item>5.8 ft</item>
+        <item>5.9 ft</item>
+        <item>5.10 ft</item>
+        <item>5.11 ft</item>
+        <item>6.0 ft</item>
+        <item>6.1 ft</item>
+        <item>6.2 ft</item>
+        <item>6.3 ft</item>
+        <item>6.4 ft</item>
+        <item>6.5 ft</item>
+        <item>6.6 ft</item>
+        <item>6.7 ft</item>
+        <item>6.8 ft</item>
+        <item>6.9 ft</item>
+        <item>6.10 ft</item>
+        <item>6.11 ft</item>
+        <item>7.0 ft</item>
+
+    </string-array>
+
+    <string-array name="drop_married">
+        <item><b>--Select Married Status--</b></item>
+        <item> Single</item>
+        <!-- <item> Married </item>-->
+        <item> Awaiting Divorce </item>
+        <item> Divorced </item>
+        <item> Widowed </item>
+        <item> Annulled </item>
+
+    </string-array>
+
+    <string-array name="drop_rashi">
+
+        <item><b>--Select Rashi--</b></item>
+        <item>Aries</item>
+        <item>Taurus</item>
+        <item>Gemini</item>
+        <item>Cancer</item>
+        <item>Leo</item>
+        <item>Virgo</item>
+        <item>Libra</item>
+        <item>Scorpio</item>
+        <item>Sagittarius</item>
+        <item>Capricorn</item>
+        <item>Aquarius</item>
+        <item>Pisces</item>
+
+    </string-array>
+
+    <string-array name="drop_nakshtra">
+
+        <item><b>--Select Nakshatra--</b></item>
+        <item>Ashwini</item>
+        <item>Bharani</item>
+        <item>Kritika</item>
+        <item>Rohini</item>
+        <item>Mrigashirsha</item>
+        <item>Ardra</item>
+        <item>Punarvasu</item>
+        <item>Pushya </item>
+        <item>Ashlesha </item>
+        <item>Magha </item>
+        <item>Purva or Purva Phalguni </item>
+        <item>Uttara or Uttara Phalguni </item>
+        <item>Hasta </item>
+        <item>Chitra </item>
+        <item>Swati </item>
+        <item>Visakha </item>
+        <item>Anuradha </item>
+        <item>Jyeshtha </item>
+        <item>Mula </item>
+        <item>Purva Ashadha </item>
+        <item>Uttara Aṣaḍha </item>
+        <item>Sravaṇa</item>
+        <item>Sraviṣṭha or Dhanishta</item>
+        <item>Shatabhisha or Satataraka</item>
+        <item>Purva Bhadrapada </item>
+        <item>Uttara Bhadrapada </item>
+        <item>Revati </item>
+
+    </string-array>
+
+    <string-array name="drop_nadi">
+
+        <item><b>--Select Nadi--</b></item>
+        <item>Adhi Nadi</item>
+        <item>Madhya Nadi</item>
+        <item>Antya Nadi</item>
+
+    </string-array>
+
+    <string-array name="drop_gan">
+
+        <item><b>--Select Gan--</b></item>
+        <item>Devgan</item>
+        <item>Rakshasgan</item>
+        <item>Manushyagan</item>
+
+    </string-array>
+
+    <string-array name="drop_charan">
+
+        <item><b>--Select Charan--</b></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="send_interest">Send Interest</string>
+    <!--<string name="sponsored_by"><u>Powered by Ezacus Technologies Pvt.Ltd.</u>\n&amp; Mali Samaj Seva Samiti</string>-->
+    <string name="sponsored_by">Powered by</string>
+    <string name="powerd_by">Ezacus Technology </string>
+    <string name="about_us">About Us</string>
+    <string name="privacy_policy">T &amp; C</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="logo">logo</string>
+    <string name="backbutton">backButton</string>
+    <string name="logout">Logout</string>
+    <string name="ignore">Ignore</string>
+    <string name="shortlist">Shortlist</string>
+    <string name="shortlisted">Shortlisted</string>
+    <string name="intro">My name is Pradnya and finding a good partner for me. and I am completed MBA and M.Com and at present working in private company</string>
+    <string name="lifestyle_and_appearance">Lifestyle and Appearance</string>
+    <string name="family_details">Family Details</string>
+    <string name="text_introduction">Text introduction </string>
+    <string name="slim">Slim</string>
+    <string name="average_athletic">Average</string>
+    <string name="heavy">Heavy</string>
+    <string name="about_partner">About Partner</string>
+    <string name="no_of_siblings">No. of Siblings :</string>
+    <string name="upload_profile_and_other_photos">Upload Photos</string>
+    <string name="education">Education</string>
+    <string name="how_matrimony_works">How Matrimony works?</string>
+    <string name="search_for_matches_form_over_10_lakhs_of_profiles">Search for matches form over 10 lakhs of profiles</string>
+    <string name="desired_partner_eduction">Desired Partner Education</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="family_information">Family Information</string>
+    <string name="skip">skip</string>
+    <string name="desired_partner_information">Desired Partner Information</string>
+    <string name="desired_partner_lifestyle">Desired Partner LifeStyle</string>
+    <string name="horoscope_information">Horoscope Information</string>
+    <string name="introduction">Introduction</string>
+    <string name="select_other_photos_optional">Select Other Photos (Optional)</string>
+    <string name="recently_matches">Recent Matches</string>
+    <string name="recently_joined">Recently Joined</string>
+    <string name="recently_profile_visitors">Recently Profile Visitors</string>
+    <string name="astro_details">Astro Details</string>
+    <string name="recently_joint">Recently Joined</string>
+    <string name="view_all">View All</string>
+    <string name="invite">Invite</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="send_sms">SEND SMS</string>
+    <string name="share">Share</string>
+    <string name="block">Block</string>
+    <string name="chat">Chat</string>
+
+    <string name="in_my_own_words">In my won words</string>
+    <string name="basic_details">Basic Details</string>
+    <string name="your_profile">Your Profile</string>
+    <string name="back_button">back button</string>
+    <string name="profile_image">profile image</string>
+    <string name="recent_profile_view">Recently Viewed Profile</string>
+    <string name="upload_profile_picture">Upload Profile Picture</string>
+    <string name="image_one">image one</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="not_a_member_yet">Not a member yet?</string>
+    <string name="family_type">Family Type</string>
+    <string name="name">Name</string>
+    <string name="dot">:</string>
+    <string name="physical_status">Physical Status</string>
+    <string name="complexion">Complexion</string>
+    <string name="profile_created_by">Profile Created by</string>
+    <string name="eating_habits">Eating Habits</string>
+    <string name="drinking_habits">Drinking Habits</string>
+    <string name="smoking_habits">Smoking Habits</string>
+    <string name="brother_s">Brother\'s</string>
+    <string name="brother_s_married">Brother\'s Married</string>
+    <string name="sister_s">Sister\'s</string>
+    <string name="sister_s_married">Sister\'s Married</string>
+    <string name="matches_20_21">MATCHES</string>
+    <string name="temp">temp</string>
+    <string name="dot1">:</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="unique_id">YZ123ds</string>
+    <string name="home">Home</string>
+    <string name="login_business">Login</string>
+    <string name="recently_visitors">Profile View</string>
+    <string name="profile_visitors">Profile Visitors</string>
+    <string name="exit">Exit</string>
+    <string name="invite_list">Invite List</string>
+    <string name="my_contact">Contacts</string>
+    <string name="search_by_id">Search by Profile Id</string>
+    <string name="search_by_name">Search by name</string>
+    <string name="birth_date">Birth Date :</string>
+    <string name="birth_time_d">Birth Time :</string>
+    <string name="birth_t">Birth Time </string>
+    <string name="browse">Browse</string>
+    <string name="shortlised">Shortlisted</string>
+    <string name="or_image">Or image</string>
+    <string name="my_profile">My Profile</string>
+    <string name="invite_me">Invite</string>
+    <string name="shortlist_me">Shortlist</string>
+    <string name="view_me">View</string>
+    <string name="basic_info">Basic\ninfo</string>
+    <string name="view_photos">View\nPhotos</string>
+    <string name="profession_info">Profession\ninfo</string>
+    <string name="family_info">Family\ninfo</string>
+    <string name="astro_info">Astro\ninfo</string>
+    <string name="looking_for">Looking\nfor</string>
+    <string name="father_company">Father Company</string>
+    <string name="father_post">Father Post</string>
+    <string name="mother_comapany">Mother Company</string>
+    <string name="mother_post">Mother Post</string>
+    <string name="no_intro">Introduction not available…</string>
+    <string name="edit_basic_details">Edit basic\ninfo</string>
+    <string name="manage_photos">Manage\nphotos</string>
+    <string name="edit_profession_info">Edit profession\ninfo</string>
+    <string name="edit_family_info">Edit family\ninfo</string>
+    <string name="edit_astro_info">Edit astro\ninfo</string>
+    <string name="edit_looking_for">Edit looking\nfor</string>
+    <string name="update">Update</string>
+    <string name="min">Min</string>
+
+
+    <!-- News strings -->
+
+    <string name="news_list">News List</string>
+    <string name="upload_news">Upload News</string>
+    <string name="temp1">News Title is there be happy with and happy and happy both of you happiness News Title is there be happy with and happy and happy both of you happinessNews Title is there be happy with and happy and happy both of you happiness News Title is there be happy with and happy and happy both of you happiness News Title is there be happy with and happy and happy both of you happinessNews Title is there be happy with and happy and happy both of you happiness</string>
+    <string name="news_status">News Status </string>
+    <string name="uploaded_news">Uploaded News</string>
+    <string name="news_image">news_image</string>
+    <string name="max_age">Max. Age</string>
+    <string name="min_height_1">Min. Height</string>
+    <string name="max_height_1">Max. Height</string>
+    <string name="advt_list">Advertisement List</string>
+    <string name="upload_advt">Upload Advertisement</string>
+    <string name="upload_achievement">Upload Achievement</string>
+    <string name="unique">Unique Id</string>
+    <string name="invitation_activity">Invitation Activity</string>
+    <string name="loading">Loading</string>
+    <string name="average">Average</string>
+    <string name="something_went_wrong">something went wrong</string>
+    <string name="matches_list">Matches List</string>
+    <string name="near_by">Near by</string>
+    <string name="business_profile">Profile</string>
+    <string name="business_directory">Business Directory</string>
+    <string name="business_insert">Insert Business</string>
+    <string name="business_name">Business Name</string>
+    <string name="business_address">Business Address</string>
+    <string name="office_number">Office Number</string>
+    <string name="website">Website</string>
+    <string name="services">Services</string>
+    <string name="contact_person_name">Contact Person Name</string>
+    <string name="upload_business_images">Upload Business Images</string>
+    <string name="Other_details">Business Other Details</string>
+    <string name="what">What? e.g. Morya tools</string>
+    <string name="where">Where? e.g. Nashik</string>
+    <string name="service">serv</string>
+    <string name="call">Call</string>
+    <string name="direction">Direction</string>
+    <string name="mail">Mail</string>
+    <string name="additional_information">Additional Information</string>
+    <string name="contact">Contact</string>
+    <string name="working_hours">Working Hours</string>
+    <string name="_0_km">0 km</string>
+    <string name="_0_min">0 min</string>
+    <string name="text_1">In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog thats filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied from a newspaper or the internet. The are likely to focus on the text, disregarding the layout and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments. Lorem ipsum and its many variants have been employed since the early 1960ies, and quite likely since the sixteenth century.</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="select_location"><u>Select Location</u></string>
+    <string name="confirm_location">Confirm Location</string>
+    <string name="select_working_hours">Select Working Hours</string>
+    <string name="news">News</string>
+    <string name="advt">Advertisement</string>
+    <string name="matrimony">Matrimony</string>
+    <string name="business">Business</string>
+    <string name="achievemnt">Achievement</string>
+    <string name="donation">Donation</string>
+    <string name="personal">Personal</string>
+    <string name="photos">Photos</string>
+    <string name="family">Family</string>
+    <string name="lifestyle">LifeStyle</string>
+    <string name="horoscope">Horoscope</string>
+    <string name="self_intro">Self Intro</string>
+    <string name="looking">Looking For</string>
+    <string name="select_mother_tongue">Select Mother Tongue</string>
+    <string name="select_country">Select Country</string>
+    <string name="select_state">Select State</string>
+    <string name="select_city">Select City</string>
+    <string name="select_eduction">Select Education</string>
+    <string name="select_eduction_in">Select Education In</string>
+    <string name="select_working_with">Select Working With</string>
+    <string name="select_working_as">Select Working As</string>
+    <string name="enter_to_matri">Enter to Matrimony</string>
+    <string name="enter_as_guest">Enter as Guest</string>
+    <string name="upload">Upload Photos</string>
+    <string name="kundli_photo">Kundli Photo</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="lifestyle_info">LifeStyle info</string>
+    <string name="fair">Fair</string>
+    <string name="wheatish">Wheatish</string>
+    <string name="wheatish_brown">Wheatish Brown</string>
+    <string name="dark">Dark</string>
+    <string name="Physical_challenged">Physical Challenged</string>
+    <string name="edit_life_style">Edit LifeStyle\n info</string>
+    <string name="manglik">Manglik</string>
+    <string name="invited">Invited</string>
+    <string name="search_your_match">Search Your Match</string>
+    <string name="bride">Bride</string>
+    <string name="groom">Groom</string>
+    <string name="any_mother_tounge">Any Mother Tongue</string>
+    <string name="any_married_status">Any Married Status</string>
+    <string name="any_country">Any Country</string>
+    <string name="any_state">Any State</string>
+    <string name="any_city">Any City</string>
+    <string name="any_eduction">Any Education</string>
+    <string name="any_income">Any Income</string>
+    <string name="edit_self_introduction">Edit Introduction</string>
+    <string name="photo_identify">Photo Identify</string>
+    <string name="any">Any</string>
+    <string name="alert_close"><u>Close</u></string>
+    <string name="profile_managed_by">Profile Manage by</string>
+    <string name="manged_self">Self</string>
+    <string name="candidate">Candidate</string>
+    <string name="our_location">Current Location</string>
+    <string name="refresh">Refresh</string>
+    <string name="offline">Offline</string>
+    <string name="online">Online</string>
+    <string name="cancel_invitation">Cancel Invitation</string>
+    <string name="accept_invitation">Accept Invitation</string>
+    <string name="lifestyle_information">LifeStyle Information</string>
+    <string name="FCM_KEY">AIzaSyB3bObXLCNSzV5EU4CkIA6IesPSlmglPhQ</string>
+    <string name="message">Welcome back,</string>
+    <string name="accept">Accept</string>
+    <string name="notification">Notification</string>
+    <string name="tag_line">Here comes the love of \nyour life</string>
+    <string name="view_profile">View Profile</string>
+    <string name="cast">Caste</string>
+    <string name="sub_caste">Sub-Caste</string>
+    <string name="swapnil_bharat_kokane">Swapnil Bharat Kokane</string>
+    <string name="you_blocked_text">You have blocked this member.\nClick to unblock</string>
+    <string name="you_are_blocked_text">You are blocked by this member.</string>
+    <string name="any_profession">Any Profession</string>
+    <string name="profession">Profession</string>
+    <string name="phydical_disability">Physical Disability</string>
+    <string name="parent_profile_picture">Upload Profile Picture</string>
+    <string name="insertnews">Insert News</string>
+    <string name="mainactivitynotification">Main Notification</string>
+    <string name="mainactivityshare">Share App</string>
+
+    <string-array name="working_hours_to">
+
+        <item>--to--</item>
+        <item>Closed</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+        <item>24:00</item>
+        <item>01:00</item>
+        <item>02:00</item>
+        <item>03:00</item>
+        <item>04:00</item>
+        <item>05:00</item>
+        <item>06:00</item>
+        <item>07:00</item>
+        <item>08:00</item>
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+
+    </string-array>
+
+    <string-array name="working_hours_from">
+
+        <item>--from--</item>
+        <item>Closed</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+        <item>24:00</item>
+        <item>01:00</item>
+        <item>02:00</item>
+        <item>03:00</item>
+        <item>04:00</item>
+        <item>05:00</item>
+        <item>06:00</item>
+        <item>07:00</item>
+        <item>08:00</item>
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+
+    </string-array>
+
+    <string-array name="am_to_pm">
+
+        <item>AM</item>
+        <item>PM</item>
+
+    </string-array>
+
+</resources>

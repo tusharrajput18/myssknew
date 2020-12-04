@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginTop="?actionBarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/rectangle"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <TextView
+                                android:id="@+id/tv__business_country"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="textMultiLine"
+                                android:maxLines="5"
+                                android:hint="Select Country"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <TextView
+
+                                android:id="@+id/tv_business_stateid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="textMultiLine"
+                                android:background="@null"
+                                android:hint="Select State"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_business_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="textMultiLine"
+                                android:maxLines="5"
+                                android:hint="Select City"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_business_taluka"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="textMultiLine"
+                                android:maxLines="5"
+                                android:background="@null"
+                                android:hint="Enter Taluka"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_business_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="textMultiLine"
+                                android:maxLines="5"
+                                android:background="@null"
+                                android:hint="Address"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp">
+
+                            <TextView
+                                android:id="@+id/et_businesslocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="textMultiLine"
+                                android:maxLines="5"
+                                android:background="@null"
+                                android:hint="Business Location"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_margin="20dp"
+                android:gravity="bottom">
+                <TextView
+                    android:id="@+id/tv_continue3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_16"
+                    android:text="Continue"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/dimen_15"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_bg"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/con_progressbar"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+</LinearLayout>

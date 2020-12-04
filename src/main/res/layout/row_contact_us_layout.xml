@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:gravity="center"
+        android:text="Swapnil Kokane"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_20"
+        android:textStyle="bold" />
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:id="@+id/tv_contactUsWhats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:drawableLeft="@mipmap/ic_whatsapp"
+        android:drawablePadding="@dimen/dimen_10"
+        android:gravity="center"
+        android:text="+919923449493"
+        android:textSize="@dimen/text_18"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

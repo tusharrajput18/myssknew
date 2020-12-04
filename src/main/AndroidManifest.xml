@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.co.vsys.myssksamaj"
+    android:targetSandboxVersion="1">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.MatriContactUsActivity"></activity>
+        <activity android:name=".maindirectory.OtpVerificationActivity" />
+        <activity android:name=".maindirectory.MainMobileNumberActivity" />
+        <activity android:name=".activities.DonationActivity" />
+        <activity android:name=".PrivacyActivity" />
+        <activity android:name=".activities_news.News_Detail_activity" />
+        <activity android:name=".activities_advertisement.Advertisement_Detail_activity" />
+        <activity android:name=".activities.PaymentInfoActivity" />
+        <activity android:name=".activities_advertisement.InsertAdvertisementActivity" />
+        <activity android:name=".activities_advertisement.AdvertisementActivity" />
+        <activity android:name=".business_activity.BusinessDetailsMainActivity" /> <!-- <activity android:name=".business_activity.BusinessDetailsActivity" /> -->
+        <activity android:name=".activities_news.InsertNewsActivity" />
+        <activity android:name=".business_activity.BusinessListActivity" />
+        <activity android:name=".business_activity.BusinessServicesActivity" />
+        <activity android:name=".business_activity.BusinessSubActivity" />
+        <activity android:name=".CommonRegisterActivity" />
+        <activity android:name=".CommonLoginActivity" />
+        <activity android:name=".activities.MatrimonyMyContactsActivity" />
+        <activity android:name=".business_activity.BusinessMapsActivity" />
+        <activity android:name=".business_activity.BusinessMapsDirectionActivity" />
+        <!--
+         <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/network_security_config" />
+        -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".activities.RecentMatchesPagerActivity" />
+        <activity android:name=".activities.PackagesActivity" />
+        <activity android:name=".activities.PaymentActivity" />
+        <activity android:name=".activities.SearchPagerActivity" />
+        <activity
+            android:name=".activities.CandidateRegistrationActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.MainRegistrationActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.BasicInfoActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.UploadImagesActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/CropTheme" />
+        <activity
+            android:name=".activities.EditIntroductionActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".maindirectory.LoginOptionsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ListActivity"
+            android:configChanges="orientation"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HomeActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".activities.MatrimonyProfileViewActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".activities.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.co.vsys.myssksamaj.activities.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".activities.MatrimonyProfileViewActivity1"
+            android:configChanges="orientation"
+            android:parentActivityName=".activities.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.co.vsys.myssksamaj.activities.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ListActivity1"
+            android:configChanges="orientation"
+            android:parentActivityName=".activities.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.co.vsys.myssksamaj.activities.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".maindirectory.SplashScreenActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ProfileVisitedListActivity"
+            android:configChanges="orientation"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ProfileVisitedViewActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".activities.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.co.vsys.myssksamaj.activities.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".activities.UserDetailsActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".activities.HomeActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.co.vsys.myssksamaj.activities.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ShortlistedActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ShortlistedProfileViewActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".activities.ShortlistedActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.co.vsys.myssksamaj.activities.ShortlistedActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ProfileSearchActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.SearchDisplayActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.MyProfileActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditMyProfileActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.SearchListActivity" />
+        <activity
+            android:name=".activities.MatriInvitationActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/NewsAppTheme" />
+        <activity
+            android:name=".activities.InvitationDisplayActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".activities.MatriInvitationActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.co.vsys.myssksamaj.activities.MatriInvitationActivity" />
+        </activity>
+        <activity
+            android:name=".activities.InvitationReceivedDisplayActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".activities.MatriInvitationActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.co.vsys.myssksamaj.activities.MatriInvitationActivity" />
+        </activity>
+        <activity
+            android:name=".activities.InvitationAcceptActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".activities.MatriInvitationActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.co.vsys.myssksamaj.activities.MatriInvitationActivity" />
+        </activity>
+        <activity android:name=".activities.MatrimonyNotificationActivity" />
+        <activity android:name=".activities.EditBasicInfoActivity" />
+        <activity android:name=".activities.EditProfessionInfoActivity" />
+        <activity android:name=".activities.EditFamilyInfoActivity" />
+        <activity android:name=".activities.EditAstroInfoActivity" />
+        <activity android:name=".activities.EditAstroInfoActivity1" />
+        <activity
+            android:name=".activities.EditLookingForActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.MatriMatchesActivity" />
+        <activity
+            android:name=".activities.ProfileVisitorListActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ProfileVisitorViewActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".activities.ProfileVisitorListActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.co.vsys.myssksamaj.activities.ProfileVisitorListActivity" />
+        </activity>
+        <activity android:name=".activities.MatriNearByActivity" />
+        <activity
+            android:name=".maindirectory.LoginActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan" />
+        <activity
+            android:name=".maindirectory.ParentRegisterActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".activities.EditLifeStyleActivity" />
+        <activity
+            android:name=".matrimonyguest.GuestSearchActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".matrimonyguest.GuestSearchListActivity" />
+        <activity android:name=".matrimonyguest.GuestSearchDisplayActivity" />
+        <activity
+            android:name=".activities.ChatActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.ChatListActivity" />
+        <activity android:name=".activities.ViewMyProfileActivity" />
+        <activity android:name=".activities.BusinessDetailsActivity" />
+        <activity android:name=".activities.ForgetPasswordActivity" />
+        <activity android:name=".activities.MatriChatViewProfileActivity" />
+        <activity android:name=".activities.BusinessMapDisplayActivity" />
+        <activity android:name=".activities.BusinessInsertOtherActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.BusinessTypeListActivity" />
+        <activity android:name=".activities.MainLoginActivity" />
+        <activity android:name=".activities.AdvtListActivity" />
+        <activity android:name=".activities.BusinessDashboardActivity" />
+        <activity android:name=".activities_news.NewsDashboardActivity" />
+        <activity android:name=".activities.NewsListActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_api_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/controlColor" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="df57a4f774d3cdbfc4f2c06e588fa0122dd0d68a" />
+
+        <service
+            android:name=".matrimonyfcm.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".matrimonyfcm.MyFirebaseInstanceIDService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.SyncService" />
+
+        <receiver android:name=".broadcast_receivers.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

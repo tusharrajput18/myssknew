@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<in.co.vsys.myssksamaj.custom_views.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start|center"
+    android:padding="@dimen/dimen_5"
+    android:id="@+id/row_text"
+    android:textColor="@color/colorBlack"
+    android:textSize="@dimen/text_18">
+
+</in.co.vsys.myssksamaj.custom_views.CustomTextView>

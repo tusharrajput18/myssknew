@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BusinessInsertOtherActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_20"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/btn_busi_selectLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@drawable/edittext_bg"
+                android:drawableLeft="@drawable/location_black"
+                android:drawablePadding="10dp"
+                android:gravity="start|center"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="@string/select_location"
+                android:textColor="@android:color/black"
+                app:backgroundTint="@color/colorText" />
+
+            <LinearLayout
+                android:id="@+id/address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_business_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@drawable/edittext_bg"
+                    app:backgroundTint="@color/colorText">
+
+                </android.support.v7.widget.AppCompatSpinner>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_business_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@drawable/edittext_bg"
+                    app:backgroundTint="@color/colorText">
+
+                </android.support.v7.widget.AppCompatSpinner>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spinner_business_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@drawable/edittext_bg"
+                    app:backgroundTint="@color/colorText">
+
+                </android.support.v7.widget.AppCompatSpinner>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_working_hours"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:textSize="@dimen/text_16"
+                android:padding="@dimen/dimen_10"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_20"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/edittext_bg"
+                android:padding="@dimen/dimen_10"
+                android:backgroundTint="@color/colorText"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="start|center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/monday"
+                            android:textSize="@dimen/text_16" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_monday_to_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_monday_from_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tuesday"
+                            android:textSize="@dimen/text_16" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_tuesday_to_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_tuesday_from_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wednesday"
+                            android:textSize="@dimen/text_16" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_wednesday_to_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_wednesday_from_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/thursday"
+                            android:textSize="@dimen/text_16" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_thursday_to_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_thursday_from_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/friday"
+                            android:textSize="@dimen/text_16" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_friday_to_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_friday_from_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start|center">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/saturday"
+                            android:textSize="@dimen/text_16" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="start|center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_saturday_to_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_saturday_from_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sunday"
+                            android:textSize="@dimen/text_16" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_sunday_to_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spinner_sunday_from_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:backgroundTint="@color/colorText">
+
+                        </android.support.v7.widget.AppCompatSpinner>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_100"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dimen_3"
+                        app:cardElevation="@dimen/dimen_5"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/img_busiInsert_one"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/img_preview" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_100"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dimen_3"
+                        app:cardElevation="@dimen/dimen_5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/img_busiInsert_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/img_preview" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_100"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dimen_3"
+                        app:cardElevation="@dimen/dimen_5"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white"
+                            android:gravity="center">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/img_busiInsert_three"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/img_preview" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_100"
+                        android:layout_margin="@dimen/dimen_5"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/dimen_3"
+                        app:cardElevation="@dimen/dimen_5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/img_busiInsert_four"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/img_preview" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_30"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_insert_Submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/submit_button_bg"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar_insertOtherBusiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_progress"
+        android:visibility="gone" />
+
+</RelativeLayout>

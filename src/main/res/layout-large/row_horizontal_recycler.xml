@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_3">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="@dimen/dimen_3"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.45"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layerType="software"
+                    android:padding="@dimen/dimen_10">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        card_view:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                        card_view:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="10dp">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_recentlyJoint_profilePic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/profile_image"
+                            card_view:civ_border_color="#DDDDDD"
+                            card_view:civ_border_width="@dimen/dimen_3" />
+
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        card_view:layout_constraintBottom_toTopOf="@+id/btn_recentlyJoint_invite"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toBottomOf="@+id/frameLayout3">
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/linear_on"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_online1"
+                                android:layout_width="@dimen/dimen_10"
+                                android:layout_height="@dimen/dimen_10"
+                                android:background="@drawable/ic_online"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:text="@string/online"
+                                android:textSize="@dimen/dimen_10"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/linear_off"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_offline1"
+                                android:layout_width="@dimen/dimen_10"
+                                android:layout_height="@dimen/dimen_10"
+                                android:background="@drawable/ic_offline"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:text="@string/offline"
+                                android:textSize="@dimen/dimen_10"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                        android:id="@+id/btn_recentlyJoint_invite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_border_text_fill"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/dimen_15"
+                        android:paddingTop="@dimen/dimen_5"
+                        android:paddingEnd="@dimen/dimen_15"
+                        android:paddingBottom="@dimen/dimen_5"
+                        android:text="@string/invite"
+                        android:textColor="@color/colorHind"
+                        android:textSize="@dimen/text_18"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintStart_toStartOf="parent" />
+
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                        android:id="@+id/btn_recentlyJoint_invited"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_border_text"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/dimen_15"
+                        android:paddingTop="@dimen/dimen_5"
+                        android:paddingEnd="@dimen/dimen_15"
+                        android:paddingBottom="@dimen/dimen_5"
+                        android:text="@string/invited"
+                        android:textColor="@color/colorHind"
+                        android:visibility="gone"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintStart_toStartOf="parent" />
+
+                    <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                        android:id="@+id/btn_recentlyJoint_accept"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_border_text"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/dimen_15"
+                        android:paddingTop="@dimen/dimen_5"
+                        android:paddingEnd="@dimen/dimen_15"
+                        android:paddingBottom="@dimen/dimen_5"
+                        android:text="@string/accept"
+                        android:textColor="@color/colorHind"
+                        android:visibility="gone"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintStart_toStartOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/img_premium"
+                    android:layout_width="@dimen/dimen_50"
+                    android:layout_height="@dimen/dimen_50"
+                    android:src="@drawable/premium" />
+
+            </FrameLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="260dp"
+                android:layout_weight="0.75"
+                android:paddingStart="@dimen/dimen_5"
+                android:paddingTop="@dimen/dimen_5"
+                android:paddingEnd="@dimen/dimen_5"
+                android:paddingBottom="@dimen/dimen_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:gravity="start|center"
+                            android:text="Id "
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_18" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_ageHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:gravity="start|center"
+                            android:text="Age"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_18" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_heightHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:gravity="start|center"
+                            android:text="Height"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_18" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_languageHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:text="Language "
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_18"
+                            android:visibility="gone" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_addressHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Address"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_18"
+                            android:visibility="gone" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_incomeHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Income "
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_18"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6.5"
+                        android:orientation="vertical">
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_profileId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:textSize="@dimen/text_18" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_userAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:textSize="@dimen/text_18" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_userHeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:textSize="@dimen/text_18" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_userLanguage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:textSize="@dimen/text_18"
+                            android:visibility="gone" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_userCity_Country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:textSize="@dimen/text_18"
+                            android:visibility="gone" />
+
+                        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                            android:id="@+id/tv_recentlyJoint_userIncome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_7"
+                            android:textSize="@dimen/text_18"
+                            android:visibility="gone"
+
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

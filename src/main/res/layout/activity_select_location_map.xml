@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".business.SelectBusinessLocationActivity">
+
+    </fragment>
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edt_search_busi_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="@string/search"
+                android:paddingStart="@dimen/dimen_10"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                app:backgroundTint="@android:color/white" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/btn_search_busi_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_action_search" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/tv_busi_select_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="address :" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextView
+            android:id="@+id/tv_busi_select_lat_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Lat and Long :" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomButton
+            android:id="@+id/btn_confirm_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:enabled="false"
+            android:text="@string/confirm_location"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/colorPrimaryDark" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChatActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_matrimonyChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_chatBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_back_white_18dp"
+                android:tint="@color/colorBlack" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/toolbar_chat_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dimen_7"
+                android:layout_toRightOf="@+id/img_chatBack"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:id="@+id/chat_options_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/reply_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_margin_medium"
+                    android:src="@drawable/ic_reply_black" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/delete_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_margin_medium"
+                    android:padding="@dimen/padding_margin_medium"
+                    android:src="@drawable/ic_delete_black" />
+
+            </LinearLayout>
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                android:id="@+id/toolbar_chat_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_toLeftOf="@id/chat_options_container"
+                android:layout_toRightOf="@+id/toolbar_chat_image"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_16"
+                android:textStyle="bold|normal" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/enter_message_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_margin_small">
+
+            <ImageView
+                android:id="@+id/send"
+                android:layout_width="@dimen/thumbsize"
+                android:layout_height="@dimen/thumbsize"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_margin_medium"
+                android:src="@drawable/ic_chat_send" />
+
+            <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                android:id="@+id/edt_matrimonyChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/send"
+                android:background="@drawable/image_border"
+                android:hint="Enter message here"
+                android:inputType="textCapSentences"
+                android:padding="@dimen/padding_margin_medium"
+                android:paddingLeft="@dimen/dimen_3" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_matrimonyChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/enter_message_container"
+        android:layout_below="@+id/toolbar_matrimonyChat"
+        android:layout_alignParentLeft="true">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/reply_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/enter_message_container"
+        android:layout_marginRight="@dimen/padding_margin_medium"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_margin_medium"
+            android:layout_marginTop="@dimen/padding_margin_medium"
+            android:layout_marginRight="@dimen/padding_margin_medium"
+            android:background="@drawable/rounded_rect_green"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_margin_small">
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:id="@+id/reply_sender_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SenderName" />
+
+            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                android:id="@+id/message_to_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SenderName"
+                android:textColor="@color/colorBlack" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cancel_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_cancel_grey" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/block_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/blocked_text"
+            android:text="@string/you_blocked_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_medium_large" />
+
+        <in.co.vsys.myssksamaj.custom_views.CustomButtonBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_margin_large"
+            android:background="@color/green"
+            android:id="@+id/unblock"
+            android:text="Unblock"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/chat_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_margin_small">
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_weight="1" />
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":" />
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:id="@+id/value"
+        android:layout_width="0dp"
+        android:layout_marginLeft="@dimen/padding_margin_small"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+</LinearLayout>

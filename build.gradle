@@ -1,0 +1,132 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.31.2'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    dexOptions {
+        javaMaxHeapSize "8g"
+    }
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "in.co.vsys.myssksamaj"
+        minSdkVersion 14
+        targetSdkVersion 29
+        versionCode 16
+        versionName "5.3.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    implementation(name: 'peb-lib', ext: 'aar')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
+    implementation 'com.android.support:cardview-v7:28.0.0-rc01'
+    implementation 'com.android.support:design:28.0.0-rc01'
+
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.1'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.android.support:support-v4:28.0.0-rc01'
+    implementation 'com.android.support:palette-v7:28.0.0-rc01'
+    implementation 'com.google.firebase:firebase-database:16.0.5'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.firebaseui:firebase-ui-database:0.4.1'
+    implementation 'com.google.android.gms:play-services-places:16.0.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+
+
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.8@aar') {
+        transitive = true;
+    }
+
+    // retrofit:
+
+    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.okhttp:okhttp:2.0.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+
+    implementation ('com.alimuzaffar.lib:pinentryedittext:1.3.10') {
+        // Exclude is only needed if you already have
+        // any of the following as a dependency in your project.
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+
+
+    
+
+
+}
+apply plugin: 'com.google.gms.google-services'

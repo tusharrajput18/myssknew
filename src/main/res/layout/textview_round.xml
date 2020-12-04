@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<in.co.vsys.myssksamaj.custom_views.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_roundCount"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_text_view"
+    android:gravity="center"
+    android:text="100"
+    android:textColor="@color/colorBlack"
+    android:textSize="@dimen/text_14">
+
+</in.co.vsys.myssksamaj.custom_views.CustomTextView>

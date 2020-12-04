@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<in.co.vsys.myssksamaj.custom_views.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_spinner_heading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:paddingLeft="@dimen/dimen_5"
+    android:paddingRight="@dimen/dimen_5"
+    android:textColor="@color/colorBlack"
+    android:textSize="16sp" />

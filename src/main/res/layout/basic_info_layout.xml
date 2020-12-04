@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_5"
+            app:cardCornerRadius="@dimen/dimen_3">
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_5"
+            app:cardCornerRadius="@dimen/dimen_3"
+            app:cardElevation="@dimen/dimen_5">
+
+            <LinearLayout
+                android:id="@+id/actualContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewHeading
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_10"
+                    android:text="Personal Information"
+                    android:textColor="@color/colorHind"
+                    android:textSize="@dimen/text_18"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text="Name "
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text="Id "
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogUniqueId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_basicGendor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text="Gender "
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogGender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_basicDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:gravity="center|start"
+                                android:text="Date  of Birth"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogDOB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_basicAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text="Age "
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogAge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_basicHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text="Height "
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogHeight"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_basicMotherTounge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text="Mother  Tongue"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <TextView
+                                android:id="@+id/tv_Basic_alertDialogMTounge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_basicMarriedStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text="@string/married_status"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogMStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text="Mobile No."
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogMNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text="Email Id"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogEmailId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text="Caste"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogCaste"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text="Sub-Caste"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogSubCaste"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.3">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text="Address"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16"
+                                android:textStyle="bold" />
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:text=":"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/text_16" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.7">
+
+                            <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                                android:id="@+id/tv_Basic_alertDialogAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_3"
+
+                                android:gravity="start"
+                                android:paddingLeft="@dimen/dimen_3"
+                                android:text=""
+                                android:textSize="@dimen/text_16" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/layout_basicIntroduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/dimen_3"
+            app:cardElevation="@dimen/dimen_5">
+
+
+            <LinearLayout
+                android:id="@+id/introduction_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_10">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_5"
+
+                    android:text="Self Introduction"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="bold" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:id="@+id/tv_Basic_alertDialogIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="start"
+                    android:text="" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/layout_basicIdenty"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/dimen_3"
+            app:cardElevation="@dimen/dimen_5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_2"
+                    android:layout_marginBottom="@dimen/dimen_5"
+                    android:paddingStart="@dimen/dimen_5"
+                    android:paddingEnd="@dimen/dimen_5"
+                    android:text="@string/photo_identify"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/alertDialog_parentIdenty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

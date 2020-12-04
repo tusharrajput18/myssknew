@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/nav_business"
+        android:checkableBehavior="single">
+
+        <item
+        android:id="@+id/nav_business_home"
+        android:icon="@drawable/ic_action_house_outline"
+        android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_business_login"
+            android:icon="@drawable/ic_toys_black_24dp"
+            android:title="@string/login_business" />
+
+        <item
+            android:id="@+id/nav_business_search"
+            android:icon="@drawable/ic_action_search_magnifier_tool_outline"
+            android:title="@string/search" />
+
+        <item
+            android:id="@+id/nav_business_insert"
+            android:icon="@drawable/ic_action_new_add_folder"
+            android:title="@string/business_insert" />
+        <item
+            android:id="@+id/nav_business_profile"
+            android:icon="@drawable/ic_action_users"
+            android:title="@string/business_profile" />
+
+        <item
+            android:id="@+id/nav_business_nearBy"
+            android:icon="@drawable/ic_action_placeholder2"
+            android:title="@string/near_by" />
+
+        <item
+            android:id="@+id/nav_business_exit"
+            android:icon="@drawable/ic_action_exit"
+            android:title="@string/exit" />
+
+
+    </group>
+
+</menu>

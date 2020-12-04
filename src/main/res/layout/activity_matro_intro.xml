@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.EditIntroductionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/dimen_5"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_intro"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_15">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_200"
+            android:focusable="false"
+            android:textColorHint="@color/colorPrimaryDark"
+            app:counterEnabled="true"
+            app:counterMaxLength="500"
+            android:padding="@dimen/dimen_5"
+            app:counterTextAppearance="@style/TextLimitStyle"
+            app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium">
+
+            <in.co.vsys.myssksamaj.custom_views.CustomEditText
+                android:id="@+id/edt_textIntroduction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_150"
+                android:background="@drawable/bg_border"
+                android:gravity="bottom"
+                android:hint="@string/text_introduction"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/colorHint"
+                android:textColorHint="@color/colorPrimaryDark" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <in.co.vsys.myssksamaj.custom_views.CustomButton
+            android:id="@+id/btn_introNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:background="@drawable/button_bg"
+            android:minHeight="@dimen/dimen_40"
+            android:text="@string/submit"
+            android:textColor="@color/colorHind"
+            app:backgroundTint="@color/controlColor" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/introduction_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

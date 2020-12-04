@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#00BCD4">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/img_busi_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_25"
+        android:src="@drawable/img_preview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_busi_profile"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_10">
+
+        <TextView
+            android:id="@+id/tv_common_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Vsys Technologies"
+            android:textColor="@color/colorHind"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_common_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dimen_5"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:drawablePadding="@dimen/dimen_5"
+            android:gravity="center"
+            android:text="Nashik, India"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_14" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+  <!--  android:drawableLeft="@drawable/ic_stat_location_on"-->

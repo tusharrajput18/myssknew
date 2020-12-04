@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#DDDDDD"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activities.MatriMatchesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_margin_small"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back"
+            android:padding="@dimen/padding_margin_medium"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_arrow_back_black"
+            android:layout_height="wrap_content"/>
+
+        <in.co.vsys.myssksamaj.custom_views.CustomTextViewBold
+            android:layout_width="match_parent"
+            android:text="Packages"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/textsize_medium_large"
+            android:layout_marginLeft="@dimen/padding_margin_medium"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/padding_margin_medium"
+        android:text="Select a package from drop down to view package details"
+        android:textColor="@color/blue"
+        android:textStyle="italic"
+        android:textSize="@dimen/textsize_small" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="@dimen/padding_margin_medium_large"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rect_white">
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:padding="@dimen/padding_margin_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_down_grey" />
+
+            <Spinner
+                android:id="@+id/packages_spinner"
+                android:layout_width="match_parent"
+                android:layout_toLeftOf="@id/arrow"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/white" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/padding_margin_medium"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_margin_medium"
+                android:orientation="vertical">
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Package details:"
+                    android:textColor="@color/medium_text_color"
+                    android:textSize="@dimen/textsize_small" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:id="@+id/package_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkest_text_color"
+                    android:textSize="@dimen/textsize_medium_large" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amount:"
+                    android:layout_marginTop="@dimen/padding_margin_medium"
+                    android:textColor="@color/medium_text_color"
+                    android:textSize="@dimen/textsize_small" />
+
+                <in.co.vsys.myssksamaj.custom_views.CustomTextViewBold
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/textsize_large" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <in.co.vsys.myssksamaj.custom_views.CustomButtonBold
+            android:id="@+id/buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_margin_medium"
+            android:background="@color/blue"
+            android:text="Buy"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_packages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</LinearLayout>

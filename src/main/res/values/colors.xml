@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#911e78</color>
+    <color name="colorPrimaryDark1">#33911e78</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="colorHind">#ffffff</color>
+    <color name="colorText">#5e5e5e</color>
+    <color name="colorButton">#5bffffff</color>
+    <color name="colorCardBack">#ffffff</color>
+    <color name="colorDrawerBack">#92a69ba3</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorPink">#ffc2185b</color>
+    <color name="textColor">#9D9D9D</color>
+    <color name="main_background">#587581</color>
+    <color name="edit_button">#da362d</color>
+    <color name="controlColor">#911e78</color>
+    <color name="unselected_color">#D9147A</color>
+    <color name="controlColor1">#2b616d</color>
+    <color name="colorHint">#808080</color>
+    <color name="colorCream">#f5fffa</color>
+    <color name="businesstextcolor">#36261E</color>
+
+    <color name="black_font6">#BDBDBD</color>
+
+    <color name="light_green">#DCF8C6</color>
+    <color name="blue">#0B6687</color>
+    <color name="grey">#cccccc</color>
+    <color name="darkest_text_color">#333333</color>
+    <color name="medium_text_color">#888888</color>
+    <color name="light_green1">#8BC34A</color>
+    <color name="light_blue">#CCBCE0F0</color>
+    <color name="black_font5">#9E9E9E</color>
+    <color name="temp_back">#2962FF</color>
+    <color name="color_black">#000</color>
+
+
+</resources>

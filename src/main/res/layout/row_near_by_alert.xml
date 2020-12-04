@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_20">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profileImage"
+        android:layout_width="@dimen/dimen_70"
+        android:layout_height="@dimen/dimen_70"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:src="@mipmap/ic_launcher" />
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:id="@+id/tv_memberName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Member Name"
+        android:visibility="gone"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold|normal" />
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Nearby members can only discover you when you click refresh button"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_14" />
+
+    <ImageView
+        android:id="@+id/refresh_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:src="@drawable/ic_action_referesh"
+        android:tint="@color/colorBlack" />
+
+</LinearLayout>

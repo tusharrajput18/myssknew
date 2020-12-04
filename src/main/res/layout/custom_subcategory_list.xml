@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:singleLine="true"
+    android:ellipsize="marquee"
+    android:padding="@dimen/dimen_10"
+    android:layout_weight="6"
+    android:id="@+id/linearLayout_cusotm_cat"
+    style="?android:attr/spinnerDropDownItemStyle">
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <CheckBox
+        android:buttonTint="@color/colorPrimaryDark"
+        android:layout_margin="@dimen/dimen_1"
+        android:id="@+id/cusotm_subcat_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:textSize="@dimen/text_16"
+        android:text="text"
+        android:layout_weight="6"
+        android:id="@+id/tv_custom_subcatName"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+
+
+
+</LinearLayout>

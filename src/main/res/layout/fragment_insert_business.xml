@@ -1,0 +1,521 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_insertBusiness"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?actionBarSize"
+    android:paddingHorizontal="@dimen/dimen_10"
+    tools:context=".InsertBusinessFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--                    <androidx.cardview.widget.CardView-->
+                    <!--                        xmlns:android="http://schemas.android.com/apk/res/android"-->
+                    <!--                        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginHorizontal="20dp"-->
+                    <!--                        android:layout_marginVertical="10dp"-->
+                    <!--                        android:layout_gravity="center"-->
+                    <!--                        app:cardBackgroundColor="#ffff"-->
+                    <!--                        app:cardCornerRadius="8dp"-->
+                    <!--                        app:cardElevation="3dp"-->
+                    <!--                        android:clickable="true" >-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/rectangle"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_businessname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="text"
+                                android:background="@null"
+                                android:hint="Businesss Name*"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16" />
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_businessmobileno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:background="@null"
+                                android:hint="Mobile no"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_businesswhatsappno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:background="@null"
+                                android:hint="Whats App no"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_businesslandlineno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:background="@null"
+                                android:hint="Landline no"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_businessemailid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="textEmailAddress"
+                                android:background="@null"
+                                android:hint="E-mail id"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/et_business_personname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="text"
+                                android:background="@null"
+                                android:hint="Person Name"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:inputType="textEmailAddress"
+                                android:background="@null"
+                                android:hint="City*"
+                                android:layout_marginVertical="@dimen/dimen_5"
+                                android:layout_marginHorizontal="@dimen/dimen_20"
+                                android:textSize="@dimen/text_16"/>
+
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/black_font5" />
+
+                    </LinearLayout>
+                    <!--                    </androidx.cardview.widget.CardView>-->
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_margin="20dp"
+                android:gravity="bottom">
+                <TextView
+                    android:id="@+id/btn_insertFrag_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_16"
+                    android:text="Continue"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/dimen_15"
+                    android:textColor="@color/white"
+                    android:background="@drawable/rounded_bg"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:visibility="gone"
+        android:layout_marginTop="?actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:id="@+id/spinner_insertBusiness_BType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:background="@drawable/edittext_bg"
+                app:backgroundTint="@color/colorText">
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_firstname"
+                android:layout_width="match_parent"
+
+                android:layout_height="65dp"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:clipToPadding="false"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_insertBusiness_BName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/ic_action_business"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:hint="@string/business_name"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    app:backgroundTint="@color/colorText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:clipToPadding="false"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_insertBusiness_BAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/ic_home_grey600_24dp"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:hint="@string/business_address"
+                    android:inputType="textPostalAddress"
+                    android:padding="@dimen/dimen_10"
+                    app:backgroundTint="@color/colorText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_mobileno"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:clipToPadding="false"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_insertBusiness_BMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/ic_phone_grey600_24dp"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:hint="@string/mobile_number"
+                    android:inputType="number"
+                    android:padding="@dimen/dimen_10"
+                    app:backgroundTint="@color/colorText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_officeno"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:clipToPadding="false"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_insertBusiness_BOffNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/ic_action_phone_1"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:hint="@string/office_number"
+                    android:inputType="number"
+                    android:padding="@dimen/dimen_10"
+                    app:backgroundTint="@color/colorText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:clipToPadding="false"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_insertBusiness_BEmailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/ic_email_grey600_24dp"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:hint="@string/email_id"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/dimen_10"
+                    app:backgroundTint="@color/colorText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_website"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:clipToPadding="false"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_insertBusiness_BWebsite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/ic_action_grid_world"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:hint="@string/website"
+                    android:inputType="textWebEmailAddress"
+                    android:padding="10dp"
+                    app:backgroundTint="@color/colorText"
+
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_Services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:clipToPadding="false"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_insertBusiness_BServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_100"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/ic_action_communication"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:hint="@string/services"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/dimen_10"
+                    app:backgroundTint="@color/colorText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_Aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:clipToPadding="false"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_insertBusiness_BAboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/ic_action_about_us"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:hint="@string/about_us"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/dimen_10"
+                    app:backgroundTint="@color/colorText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_ContactPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:clipToPadding="false"
+                android:gravity="bottom"
+                app:hintTextAppearance="@style/Base.TextAppearance.AppCompat.Medium">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/edt_insertBusiness_BContactPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:drawableLeft="@drawable/ic_account_grey600_24dp"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:hint="@string/contact_person_name"
+                    android:inputType="textPersonName"
+                    android:padding="@dimen/dimen_10"
+                    app:backgroundTint="@color/colorText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_30"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/submit_button_bg"
+                    android:text="@string/next"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar_insertBusiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_progress"
+        android:visibility="gone" />
+
+</RelativeLayout>

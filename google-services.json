@@ -1,0 +1,43 @@
+
+{
+  "project_info": {
+    "project_number": "369991427659",
+    "firebase_url": "https://test-myssk-samaj.firebaseio.com",
+    "project_id": "test-myssk-samaj",
+    "storage_bucket": "test-myssk-samaj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369991427659:android:5f0e49cd4a8ede20",
+        "android_client_info": {
+          "package_name": "in.co.vsys.myssksamaj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369991427659-975ogumshj6rq3r95vnf8u14tsaq8fde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGkbq29HYfN73MCtSYT6HI5tocEKUmvnM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

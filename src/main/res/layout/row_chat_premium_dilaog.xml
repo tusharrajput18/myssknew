@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contact_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_margin_medium_large">
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Coming Soon"
+        android:textSize="@dimen/textsize_medium_large"
+        android:visibility="gone" />
+
+    <in.co.vsys.myssksamaj.custom_views.CustomTextView
+        android:id="@+id/chat_go_premium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/controlColor1"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_margin_medium"
+        android:paddingTop="@dimen/padding_margin_small"
+        android:paddingRight="@dimen/padding_margin_medium"
+        android:paddingBottom="@dimen/padding_margin_small"
+        android:text="Go Premium"
+        android:textColor="@color/colorHind"
+        android:textSize="@dimen/text_16" />
+</LinearLayout>
